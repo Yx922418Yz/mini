@@ -1,0 +1,364 @@
+{
+  "by_source": [
+    {
+      "id": "pdf-ai-assisted-code-review-assessment",
+      "kind": "pdf",
+      "source": "ai-assisted-code-review-assessment.pdf",
+      "src_chars": 53103,
+      "chunks": 9,
+      "done": 9,
+      "translated_src_chars": 53103,
+      "coverage": 1.0
+    },
+    {
+      "id": "pdf-how-anthropic-uses-claude-code",
+      "kind": "pdf",
+      "source": "how-anthropic-uses-claude-code.pdf",
+      "src_chars": 73451,
+      "chunks": 11,
+      "done": 11,
+      "translated_src_chars": 73473,
+      "coverage": 1.0003
+    },
+    {
+      "id": "pdf-how-openai-uses-codex",
+      "kind": "pdf",
+      "source": "how-openai-uses-codex.pdf",
+      "src_chars": 12589,
+      "chunks": 2,
+      "done": 2,
+      "translated_src_chars": 12609,
+      "coverage": 1.0016
+    },
+    {
+      "id": "html-agentic-ai-threats",
+      "kind": "html",
+      "source": "agentic-ai-threats.html",
+      "src_chars": 48588,
+      "chunks": 6,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-ai-code-review-best-practices",
+      "kind": "html",
+      "source": "ai-code-review-best-practices.html",
+      "src_chars": 14078,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-benefits-agentic-ai-oncall",
+      "kind": "html",
+      "source": "benefits-agentic-ai-oncall.html",
+      "src_chars": 6864,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-claude-code-best-practices",
+      "kind": "html",
+      "source": "claude-code-best-practices.html",
+      "src_chars": 9529,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-code-review-essentials",
+      "kind": "html",
+      "source": "code-review-essentials.html",
+      "src_chars": 11917,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-code-reviews-just-do-it",
+      "kind": "html",
+      "source": "code-reviews-just-do-it.html",
+      "src_chars": 3359,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-context-rot",
+      "kind": "html",
+      "source": "context-rot.html",
+      "src_chars": 49845,
+      "chunks": 6,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-copilot-prompt-injection-rce",
+      "kind": "html",
+      "source": "copilot-prompt-injection-rce.html",
+      "src_chars": 7254,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-devin-coding-agents-101",
+      "kind": "html",
+      "source": "devin-coding-agents-101.html",
+      "src_chars": 21433,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-finding-vulnerabilities-claude-codex",
+      "kind": "html",
+      "source": "finding-vulnerabilities-claude-codex.html",
+      "src_chars": 22517,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-good-context-good-code",
+      "kind": "html",
+      "source": "good-context-good-code.html",
+      "src_chars": 55,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-how-long-contexts-fail",
+      "kind": "html",
+      "source": "how-long-contexts-fail.html",
+      "src_chars": 9986,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-how-to-review-code-effectively",
+      "kind": "html",
+      "source": "how-to-review-code-effectively.html",
+      "src_chars": 19606,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-how-warp-uses-warp",
+      "kind": "html",
+      "source": "how-warp-uses-warp.html",
+      "src_chars": 6,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-kubernetes-troubleshooting-ai",
+      "kind": "html",
+      "source": "kubernetes-troubleshooting-ai.html",
+      "src_chars": 9377,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-lessons-from-ai-code-reviews",
+      "kind": "html",
+      "source": "lessons-from-ai-code-reviews.html",
+      "src_chars": 0,
+      "chunks": 0,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-mcp-food-for-thought",
+      "kind": "html",
+      "source": "mcp-food-for-thought.html",
+      "src_chars": 4308,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-mcp-introduction",
+      "kind": "html",
+      "source": "mcp-introduction.html",
+      "src_chars": 30818,
+      "chunks": 4,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-mcp-registry-preview",
+      "kind": "html",
+      "source": "mcp-registry-preview.html",
+      "src_chars": 5250,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-mcp-server-authentication",
+      "kind": "html",
+      "source": "mcp-server-authentication.html",
+      "src_chars": 12029,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-multi-agent-systems-ai-native",
+      "kind": "html",
+      "source": "multi-agent-systems-ai-native.html",
+      "src_chars": 14224,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-observability-basics",
+      "kind": "html",
+      "source": "observability-basics.html",
+      "src_chars": 12094,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-owasp-top-ten",
+      "kind": "html",
+      "source": "owasp-top-ten.html",
+      "src_chars": 16207,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-peeking-under-the-hood-of-claude-code",
+      "kind": "html",
+      "source": "peeking-under-the-hood-of-claude-code.html",
+      "src_chars": 294,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-prompt-engineering-guide",
+      "kind": "html",
+      "source": "prompt-engineering-guide.html",
+      "src_chars": 387,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-prompt-engineering-overview",
+      "kind": "html",
+      "source": "prompt-engineering-overview.html",
+      "src_chars": 23244,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-sast-vs-dast",
+      "kind": "html",
+      "source": "sast-vs-dast.html",
+      "src_chars": 20841,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-specs-are-the-new-source-code",
+      "kind": "html",
+      "source": "specs-are-the-new-source-code.html",
+      "src_chars": 11840,
+      "chunks": 2,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-sre-introduction",
+      "kind": "html",
+      "source": "sre-introduction.html",
+      "src_chars": 25907,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-warp-vs-claude-code",
+      "kind": "html",
+      "source": "warp-vs-claude-code.html",
+      "src_chars": 3731,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "html-writing-effective-tools-for-agents",
+      "kind": "html",
+      "source": "writing-effective-tools-for-agents.html",
+      "src_chars": 21836,
+      "chunks": 3,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    },
+    {
+      "id": "site-themodernsoftware",
+      "kind": "site",
+      "source": "index.html",
+      "src_chars": 7830,
+      "chunks": 1,
+      "done": 0,
+      "translated_src_chars": 0,
+      "coverage": 0.0
+    }
+  ],
+  "glossary": {
+    "total": 67,
+    "used_in_deliverable": 62
+  },
+  "summary": {
+    "lectures_coverage": 1.0003,
+    "overall_coverage": 0.2382,
+    "glossary_terms": 67,
+    "untranslated_chunks": 68
+  }
+}

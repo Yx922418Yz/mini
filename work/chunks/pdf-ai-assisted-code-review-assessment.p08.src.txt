@@ -1,0 +1,114 @@
+AIware ’24, July 15–16, 2024, Porto de Galinhas, Brazil
+Manushree Vijayvergiya et al.
+URL, we inspected its best practice document and determined (1) the
+best-practice type (section 1) and (2) whether a linter that detects a
+corresponding violation exists or can be easily built. Specifically,
+three authors, each with over 10 years of experience in building
+static analysis tools, read the documentation and independently
+categorized the URLs. There were no disagreements on the best-
+practice type, but there were disagreements on whether a linter
+can be easily built for about 15% of URLs. The three authors re-
+solved these disagreements through majority vote and discussion.
+Disagreements stemmed from ambiguous best practices, and those
+with multiple guidelines. For example, while checking the pres-
+ence of code documentation is relatively straightforward, reasoning
+about justified exceptions and clarity of content may not.
+Figure 6 shows the distribution of the 50 sampled URLs, broken
+down by type and whether violations can be detected by a linter.
+For 33/50 (66%) of these best practices, violation detection is beyond
+the scope of traditional static analysis.
+6
+LESSONS LEARNED
+Based on our experience developing and deploying AutoCommenter,
+we summarize a few key lessons learned:
+• Complementing traditional analyses: AutoCommenter’s
+LLM-backed approach generates comments for 68% of best
+practices frequently referenced by human reviewers. Many
+of these are out of scope for traditional static analyses.
+• Intrinsic evaluation vs. real-world performance: Intrin-
+sic evaluations and real-world performance can diverge sig-
+nificantly: our intrinsic evaluation, using a dataset of real-
+world human comments together with a state of the art
+model architecture and training process, indicated a promis-
+ing model, but our extrinsic evaluations and system improve-
+ments proved essential for a successful deployment.
+• Monitoring user acceptance is critical: Even a few nega-
+tive user experiences can erode trust in an automated system.
+Continuously monitoring and analyzing real-world feedback
+was crucial in detecting such instances and identifying reme-
+dies. In the case of AutoCommenter, a simple suppression
+mechanism was sufficient to strongly improve user accep-
+tance to over 80% without major sacrifices in efficacy.
+7
+RELATED WORK
+Johnson [15] introduced the C linter almost 50 years ago in 1977. In
+those 50 years, a considerable body of research on automated static
+analysis was produced: a recent literature review by Heckman and
+Williams [10] identified 17,571 papers. Many studies explore how
+developers interact with static analysis. Johnson et al. [14] explore
+challenges developers face when trying to use static analysis. The
+results of their study highlights the importance of good integration
+into existing developer workflows and the importance of develop-
+ing and maintaining trust in the tool. Vassallo et al. [27] explore
+how developers interact with static analysis in different contexts,
+including coding and code review. They too find that integration
+into existing workflows plays a major role in developers willing-
+ness to use the tools and that high quality of results is extremely
+important. Beller et al. [6] studied usage of static code analysis in a
+large number of open source projects. Among other findings, they
+highlight that how automated analysis is and should be used varies
+based on the programming language.
+In contrast, using machine learning for code analysis is a compar-
+atively new and less understood field. A number of recent publica-
+tions (e.g., Hong et al. [11], Li et al. [16], Li et al. [17], Thongtanunam
+et al. [24], Tufano et al. [25], and Tufano et al. [26]) report on model
+evaluations and propose tools for automated code review. While
+these models and the review comment generation task are very sim-
+ilar to the model presented in this paper, evaluations largely focused
+on historical datasets. As discussed in section 3.3.1 an intrinsic eval-
+uation on only historical comments is somewhat limited and can
+sometimes fail to predict real-world performance. Another recent
+publication by Frömmgen et al. [9] presents an evaluation of a live
+system, but for the opposite task: creating code from comments
+rather than comments from code.
+8
+CONCLUSION
+Verifying that code adheres to best practices is a common task in
+modern code review processes. While some best practices can be
+automatically verified with traditional tools such as linters, many
+require the knowledge and judgement of experienced developers,
+which requires time and effort.
+This paper reports on our experience developing, deploying, and
+evaluating AutoCommenter, an LLM-backed code review assistant
+system. Specifically, it lays out the entire process from task and
+model design, over intrinsic evaluations and system calibrations,
+to a staged roll out and end-user evaluation.
+The evaluation results show that it is feasible to develop an
+end-to-end system with capabilities well beyond traditional tools
+while achieving a high degree of end-user acceptance. These results
+are a promising first step towards the deployment of sophisticated
+code-review assistants and automated code reviews.
+Our priority was to ensure a positive developer experience by
+designing AutoCommenter to have very high precision. While recall
+was not the primary focus, we recognize its significance and plan
+to explore what changes in the model and system architecture can
+improve recall. For example, the model we used in 2022 was state of
+the art at the time. However, it has a limited context window of 2048
+tokens which suffices for only around 200 lines of code. Current
+state of the art models have context windows of tens of thousands of
+tokens during training and over a million tokens during inference.
+This leap opens up opportunities for new features and significant
+improvement in existing ones.
+9
+ACKNOWLEDGEMENTS
+This work is the result of years of collaboration between teams in
+Google Core Systems and Google DeepMind. We are grateful for the
+support and advice of all our team members and leadership, includ-
+ing Alberto Elizondo, Alexander Frömmgen, Ballie Sandhu, Chandu
+Thekkath, Chris Gorgolewski, David Tattersall, Ilya Cherny, Jacob
+Austin, Katja Grünwedel, Kristóf Molnár, Lera Kharatyan, Luka Ri-
+manić, Madhura Dudhgaonkar, Marc Brockschmidt, Marcus Revaj,
+Maxim Tabachnyk, Nina Chen, Niranjan Tulpule, Nitya Ramani,
+Paige Bailey, Pavel Sychev, Pierre-Antoine Manzagol, Quinn Madi-
+son, Roger Fleig, Satish Chandra, Savinee Dancs, Stoyan Nikolov,
+Subhodeep Moitra, and Vaibhav Tulsyan.

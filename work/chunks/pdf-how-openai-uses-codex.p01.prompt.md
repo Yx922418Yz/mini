@@ -1,0 +1,324 @@
+你是资深技术译者，正在翻译斯坦福 CS146S《The Modern Software Developer》课程材料。
+把下面的英文原文翻译成简体中文。要求：
+1. 忠实、通顺，术语前后一致；保留原文的 Markdown 结构（标题/列表/表格/代码块）。
+2. 代码、命令行、文件名、API/产品名、URL 一律保持原文，不要翻译。
+3. 严格使用下方术语表给出的译法；术语表未覆盖的专业词，首次出现时写成「中文（English）」。
+4. 只输出译文本身，不要输出任何说明、致谢或前后缀。
+
+术语表（英文 = 中文）：
+- Vibe Coding = 氛围编程
+- Scaffolding = 脚手架
+- Context Engineering = 上下文工程
+- Context Rot = 上下文腐化
+- Agent = 智能体
+- Agentic AI = 智能体式 AI
+- Coding Agent = 编码智能体
+- LLM = 大语言模型
+- Prompt = 提示词
+- Prompt Engineering = 提示工程
+- System Prompt = 系统提示词
+- Token = 词元
+- Context Window = 上下文窗口
+- Long-context = 长上下文
+- Hallucination = 幻觉
+- Code Review = 代码评审
+- Pull Request = 拉取请求
+- Commit = 提交
+- Repository = 仓库
+- Monorepo = 单体仓库
+- Refactor = 重构
+- Linter = 静态检查器
+- Static Analysis = 静态分析
+- SAST = 静态应用安全测试（SAST）
+- DAST = 动态应用安全测试（DAST）
+- Vulnerability = 漏洞
+- Injection = 注入
+- Prompt Injection = 提示注入
+- Remote Code Execution = 远程代码执行
+- Supply Chain Attack = 供应链攻击
+- OWASP Top Ten = OWASP 十大安全风险
+- Model Context Protocol = 模型上下文协议
+- MCP Server = MCP 服务器
+- Tool Use = 工具调用
+- Tool Definition = 工具定义
+- Observability = 可观测性
+- Telemetry = 遥测
+- Distributed Tracing = 分布式链路追踪
+- On-call = 值班
+- Incident = 事故
+- Site Reliability Engineering = 站点可靠性工程
+- Service Level Agreement = 服务等级协议
+- Multi-agent System = 多智能体系统
+- Orchestration = 编排
+- Sandbox = 沙箱
+- Permission = 权限
+- Approval Flow = 审批流
+- Spec = 规格说明
+- Spec-driven Development = 规格驱动开发
+- Unit Test = 单元测试
+- Continuous Integration = 持续集成
+- Troubleshooting = 排障
+- Retrieval-Augmented Generation = 检索增强生成
+- Embedding = 嵌入向量
+- Vector Database = 向量数据库
+- Benchmark = 基准测试
+- Evaluation = 评估
+- Guardrail = 护栏
+- Human-in-the-loop = 人在回路
+- Autonomy = 自主性
+- Latency = 延迟
+- Throughput = 吞吐量
+- Regression = 回归
+- Pair Programming = 结对编程
+- Technical Debt = 技术债
+- Deterministic = 确定性的
+- Rubber Duck Debugging = 小黄鸭调试法
+
+
+--- 待翻译原文 ---
+
+How OpenAI
+uses Codex
+Merged
++217 -196
+
+Contents
+Introduction
+3
+Use Cases
+Code understanding
+4
+Refactoring and migrations
+5
+Performance optimization
+6
+Improving test coverage
+7
+Increasing development velocity
+8
+Staying in flow
+9
+Exploration and ideation
+10
+Best Practices
+11
+Looking Ahead
+12
+2
+How OpenAI uses Codex
+
+Introduction
+Codex is used daily across numerous technical teams at OpenAI like Security, Product Engineering,
+Frontend, API, Infrastructure, and Performance Engineering. Teams are using it to accelerate a
+range of engineering tasks, from understanding complex systems and refactoring large codebases
+to shipping new features and resolving incidents under tight deadlines.
+Drawing from interviews with OpenAI engineers and internal usage data, we’ve compiled use cases
+and best practices that highlight how Codex helps our teams move faster, improve work quality,
+and manage complexity at scale.
+3
+How OpenAI uses Codex
+
+Use case 1
+Code understanding
+Codex helps our teams get up to speed quickly in unfamiliar parts of the codebase when
+onboarding, debugging, or investigating an incident.
+They often use Codex to locate the core logic of a feature, map out relationships between services
+or modules, and trace data flow through a system. It also helps surface architecture patterns or
+missing pieces of documentation that would otherwise require significant manual effort to
+generate.
+During incident response, Codex helps engineers ramp into new areas quickly by surfacing
+interactions between components or tracing how failure states propagate across systems.
+Anecdotes from our teams
+When I fix a bug, I use
+Ask mode to see where
+else in the codebase the
+same issue might appear.
+Performance Engineer,
+Retrieval Systems
+When I’m on‑call, I paste
+the stack trace and ask
+Codex where the auth
+flow lives. It jumps
+straight to the right files
+so I can triage fast.
+Site Reliability Engineer,
+API Platform
+Codex answers my
+‘Where would I do this?’
+repo questions across
+Terraform and Python
+way faster than grep.
+DevOps Engineer,
+Infrastructure Services
+Try using Codex for code understanding
+with these sample prompts:
+Where is the authentication logic
+implemented in this repo?
+Summarize how requests flow through this
+service from entrypoint to response.
+Which modules interact with [insert module
+name] and how are failures handled?
+4
+How OpenAI uses Codex
+
+Use case 2
+Refactoring and migrations
+Codex is commonly used to make changes that span multiple files or packages. For example, when
+engineers are updating an API, changing how a pattern is implemented, or migrating to a new
+dependency, Codex makes it easy to apply changes consistently.
+It’s especially useful when the same update needs to be made across dozens of files, or when the
+update requires awareness of structure and dependencies that aren’t easily caught with a regex or
+find-and-replace.
+They’re also using it for code cleanup by breaking up oversized modules, replacing old patterns
+with modern ones, or preparing code for better testability.
+Anecdotes from our teams
+Codex swapped every legacy
+for our new service pattern
+and opened the PR. It did in minutes what
+would’ve taken hours.
+getUserById( )
+Backend Engineer,
+ChatGPT Web
+To clear launch blockers, I have Codex
+scan for every instance of the old pattern,
+summarize the impact in Markdown, then
+open PRs with the fixes.
+Product Engineer,
+ChatGPT Enterprise
+Try using Codex for refactoring and
+migrations with these sample prompts:
+Split this file into separate modules by
+concern and generate tests for each one.
+Convert all callback-based database access
+to async/await.
+5
+How OpenAI uses Codex
+
+Use case 3
+Performance optimization
+Codex is used to identify and address performance bottlenecks.
+During tuning or reliability efforts, engineers prompt Codex to analyze slow or memory-intensive
+code paths, such as inefficient loops, redundant operations, or costly queries and suggest
+optimized alternatives, often resulting in meaningful gains in efficiency and reliability.
+Codex is also used to support code health by identifying risky or deprecated patterns that are still
+in active use. Our teams lean on it to help reduce long-term tech debt and proactively prevent
+regressions.
+Anecdotes from our teams
+I use Codex to scan for repeated
+expensive DB calls. It’s great at flagging
+hot paths and drafting batched queries I
+can later tune.
+Infrastructure Engineer,
+API Reliability
+Codex is great for spotting performance
+issues quickly— I save 30 minutes of work
+by spending 5 minutes on a prompt.
+Platform Engineer,
+Model Serving
+Try using Codex for performance
+optimization with these sample prompts:
+Optimize this loop for memory efficiency and
+explain why your version is faster.
+Find repeated expensive operations in this
+request handler and suggest caching
+opportunities.
+Suggest a faster way to batch DB queries in
+this function.
+6
+How OpenAI uses Codex
+
+Use case 4
+Improving test coverage
+Codex helps engineers write tests faster — especially in places where coverage is thin or
+completely missing.
+When working on a bug fix or refactor, engineers often ask Codex to suggest tests that cover edge
+cases or likely failure paths. For new code, it can generate unit or integration tests based on the
+function signature and surrounding logic.
+Codex is particularly helpful for identifying boundary conditions like empty inputs, max length, or
+unusual but valid states that are often missed in initial tests.
+Anecdotes from our teams
+I point Codex at low‑coverage modules
+overnight and wake up to runnable
+unit‑test PRs.
+Frontend Engineer,
+ChatGPT Desktop
+When switching mono-repo branches is
+painful, I have Codex write the tests and
+kick-off CI while I keep working on my
+branch.
+Backend Engineer,
+Payments & Billing
+Try using Codex for improving test
+coverage with these sample prompts:
+Write unit tests for this function, including
+edge cases and failure paths.
+Generate a property-based test for this
+sorting utility.
+Extend this test file to cover missing
+scenarios around null inputs and invalid
+states.
+7
+How OpenAI uses Codex
+
+Use case 5
+Increasing development velocity
+Codex helps teams move faster by accelerating both the start and end of the development cycle.
+When kicking off a new feature, engineers use it to scaffold boilerplate — generating folders,
+modules, and API stubs to get runnable code up quickly without hand-wiring every piece.
+As projects approach release, Codex helps meet tight deadlines by handling smaller but essential
+tasks like triaging bugs, filling in last-mile implementation gaps, and generating rollout scripts,
+telemetry hooks, or config files.
+It’s also used to turn product feedback into starter code. Engineers often paste in a user request or
+spec and have Codex generate a rough draft they can return to and refine later.
+Anecdotes from our teams
+I was in meetings all day and still merged
+4 PRs because Codex was working in the
+background.
+Product Engineer,
+ChatGPT Enterprise
+Codex helped ship 3-4 low‑priority fixes
+perfectly that would’ve languished in the
+backlog, which was super empowering.
+Full‑Stack Engineer,
+Internal Tools
+Try using Codex for increasing development
+velocity with these sample prompts:
+Scaffold a new API route for POST /events
+with basic validation and logging.
+Generate a telemetry hook for tracking
+success/failure of the new onboarding flow,
+using this template [insert example of your
+telemetry code].
+Create a stub implementation based on this
+spec: [insert spec or product feedback].
+8
+How OpenAI uses Codex
+
+Use case 6
+Staying in flow
+Codex helps our engineers stay productive when their schedules are fragmented and filled with
+interruptions.
+It’s used to capture unfinished work, turn notes into working prototypes, or spin off exploratory
+tasks that can be revisited later. This makes it easier to pause and resume work without losing
+context, especially when they’re on call or have a lot of meetings.
+Anecdotes from our teams
+If I spot a drive‑by fix, I fire a Codex task
+instead of swapping branches and review
+its PR when I’m free.
+Backend Engineer,
+ChatGPT API
+I routinely forward Slack threads, Datadog
+traces, issues and more to Codex so I can
+stay focused on high priority work.
+API Engineer,
+Infrastructure Observability
+Try using Codex for staying in flow
+with these sample prompts:
+Generate a plan to refactor this service
+and split it into smaller modules.
+Stub out the retry logic and add a TODO —
+I’ll fill in the backoff logic later.
+Summarize this file so I can pick up where
+I left off tomorrow.
+9
+How OpenAI uses Codex

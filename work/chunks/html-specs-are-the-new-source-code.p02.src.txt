@@ -1,0 +1,63 @@
+Now, it’s important to caveat the above with what’s needed for it to work well:
+Being specific: Using vague specs will only result in a messy codebase.
+
+Using Claude to take an initial draft of a ticket, review the codebase, and help make it more specific is an essential part of the process.
+
+In our case, we also have guidelines for writing a good spec.
+
+Being selective: Using the above for simpler tasks is ideal.
+
+The more complex the ticket, the greater the need for someone who knows what they’re doing to get involved (“self-serve” ends up being anything but, in these cases).
+
+Gatekeeping: This approach only works well because there’s an actual engineer who knows what they’re doing, reviewing changes and ensuring the balance between simplicity and functionality is maintained.
+
+But let’s be clear: the rules have changed.
+
+Specs are the source of truth for everyone building the product, including the LLM.
+
+With the proper setup, it is entirely realistic to expect to be contributing to a codebase as a non-technical person.
+
+With enough time and patience, you can start to understand the codebase and implement changes yourself, rather than simply relying on Claude to bail you out every time.
+
+One day, you might even expect an AI agent to ship your ticket whilst you sip your coffee.
+
+If you’re a PM and worried about what AI is going to do to your job, the key is to realize that the job itself is changing.
+
+But that’s also the case for everyone else.
+
+The great thing is that the core skills required for an excellent PM are even more valuable in this new world.
+
+As we predicted in a previous post, the companies that are working in this way will need more, not fewer PMs.
+
+And it turns out that prediction is working out rather well:
+Long live the spec!
+
+William Gibson, the science fiction writer who coined the phrase “cyberspace,” once said:
+The future is already here—it’s just not very evenly distributed.
+
+I’m reminded of this when I think about what is and is not possible with AI.
+
+Today, AI's gains are profoundly uneven.
+
+Some things—generating code, text, images—have made quantum leaps.
+
+They operate at AI speed.
+
+Other things—talking to customers, discovering their needs, convincing them to buy—still move at human speed.
+
+This uneven distribution is reshaping product teams.
+
+The spotlight is shifting from implementation work to understanding work.
+
+The core skills that have always set apart the best PMs—understanding user needs, defining problems clearly, designing elegant solutions—have become exponentially more valuable.
+
+The best PMs turn those insights into specs—specifications that align teams, guide implementation, and serve as the lasting artifact in an increasingly automated development world.
+
+Thanks for reading Ravi on Product!
+
+Subscribe for free to receive new posts and support my work.
+
+A guest post by
+Danny Martinez
+✍️ Writing about hiring
+Subscribe to Danny

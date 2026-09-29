@@ -1,0 +1,136 @@
+{
+ "pdf-how-anthropic-uses-claude-code": [
+  "pdf-how-anthropic-uses-claude-code.p03:7209",
+  "pdf-how-anthropic-uses-claude-code.p04:6573",
+  "pdf-how-anthropic-uses-claude-code.p05:7200",
+  "pdf-how-anthropic-uses-claude-code.p06:6591",
+  "pdf-how-anthropic-uses-claude-code.p07:7321",
+  "pdf-how-anthropic-uses-claude-code.p08:7432",
+  "pdf-how-anthropic-uses-claude-code.p09:6808",
+  "pdf-how-anthropic-uses-claude-code.p10:6327",
+  "pdf-how-anthropic-uses-claude-code.p11:3675"
+ ],
+ "pdf-how-openai-uses-codex": [
+  "pdf-how-openai-uses-codex.p01:8580",
+  "pdf-how-openai-uses-codex.p02:4029"
+ ],
+ "html-agentic-ai-threats": [
+  "html-agentic-ai-threats.p01:9050",
+  "html-agentic-ai-threats.p02:8937",
+  "html-agentic-ai-threats.p03:8926",
+  "html-agentic-ai-threats.p04:8979",
+  "html-agentic-ai-threats.p05:9105",
+  "html-agentic-ai-threats.p06:3904"
+ ],
+ "html-ai-code-review-best-practices": [
+  "html-ai-code-review-best-practices.p01:9023",
+  "html-ai-code-review-best-practices.p02:5137"
+ ],
+ "html-claude-code-best-practices": [
+  "html-claude-code-best-practices.p01:9036",
+  "html-claude-code-best-practices.p02:540"
+ ],
+ "html-code-review-essentials": [
+  "html-code-review-essentials.p01:9014",
+  "html-code-review-essentials.p02:2995"
+ ],
+ "html-code-reviews-just-do-it": [
+  "html-code-reviews-just-do-it.p01:3359"
+ ],
+ "html-context-rot": [
+  "html-context-rot.p01:8952",
+  "html-context-rot.p02:8781",
+  "html-context-rot.p03:8952",
+  "html-context-rot.p04:8981",
+  "html-context-rot.p05:9147",
+  "html-context-rot.p06:5393"
+ ],
+ "html-copilot-prompt-injection-rce": [
+  "html-copilot-prompt-injection-rce.p01:7254"
+ ],
+ "html-devin-coding-agents-101": [
+  "html-devin-coding-agents-101.p01:9083",
+  "html-devin-coding-agents-101.p02:9005",
+  "html-devin-coding-agents-101.p03:3512"
+ ],
+ "html-finding-vulnerabilities-claude-codex": [
+  "html-finding-vulnerabilities-claude-codex.p01:8945",
+  "html-finding-vulnerabilities-claude-codex.p02:9075",
+  "html-finding-vulnerabilities-claude-codex.p03:4653"
+ ],
+ "html-good-context-good-code": [
+  "html-good-context-good-code.p01:55"
+ ],
+ "html-how-long-contexts-fail": [
+  "html-how-long-contexts-fail.p01:9125",
+  "html-how-long-contexts-fail.p02:933"
+ ],
+ "html-how-to-review-code-effectively": [
+  "html-how-to-review-code-effectively.p01:8852",
+  "html-how-to-review-code-effectively.p02:8922",
+  "html-how-to-review-code-effectively.p03:1974"
+ ],
+ "html-how-warp-uses-warp": [
+  "html-how-warp-uses-warp.p01:6"
+ ],
+ "html-mcp-food-for-thought": [
+  "html-mcp-food-for-thought.p01:4308"
+ ],
+ "html-mcp-introduction": [
+  "html-mcp-introduction.p01:9072",
+  "html-mcp-introduction.p02:9051",
+  "html-mcp-introduction.p03:8979",
+  "html-mcp-introduction.p04:3917"
+ ],
+ "html-mcp-registry-preview": [
+  "html-mcp-registry-preview.p01:5250"
+ ],
+ "html-mcp-server-authentication": [
+  "html-mcp-server-authentication.p01:8964",
+  "html-mcp-server-authentication.p02:3135"
+ ],
+ "html-observability-basics": [
+  "html-observability-basics.p01:8071",
+  "html-observability-basics.p02:4095"
+ ],
+ "html-owasp-top-ten": [
+  "html-owasp-top-ten.p01:8394",
+  "html-owasp-top-ten.p02:7879"
+ ],
+ "html-peeking-under-the-hood-of-claude-code": [
+  "html-peeking-under-the-hood-of-claude-code.p01:294"
+ ],
+ "html-prompt-engineering-guide": [
+  "html-prompt-engineering-guide.p01:387"
+ ],
+ "html-prompt-engineering-overview": [
+  "html-prompt-engineering-overview.p01:8995",
+  "html-prompt-engineering-overview.p02:9022",
+  "html-prompt-engineering-overview.p03:5361"
+ ],
+ "html-sast-vs-dast": [
+  "html-sast-vs-dast.p01:9080",
+  "html-sast-vs-dast.p02:9144",
+  "html-sast-vs-dast.p03:2824"
+ ],
+ "html-specs-are-the-new-source-code": [
+  "html-specs-are-the-new-source-code.p01:9034",
+  "html-specs-are-the-new-source-code.p02:2921"
+ ],
+ "html-sre-introduction": [
+  "html-sre-introduction.p01:9057",
+  "html-sre-introduction.p02:9057",
+  "html-sre-introduction.p03:7994"
+ ],
+ "html-warp-vs-claude-code": [
+  "html-warp-vs-claude-code.p01:3731"
+ ],
+ "html-writing-effective-tools-for-agents": [
+  "html-writing-effective-tools-for-agents.p01:9116",
+  "html-writing-effective-tools-for-agents.p02:9064",
+  "html-writing-effective-tools-for-agents.p03:3806"
+ ],
+ "site-themodernsoftware": [
+  "site-themodernsoftware.p01:7830"
+ ]
+}

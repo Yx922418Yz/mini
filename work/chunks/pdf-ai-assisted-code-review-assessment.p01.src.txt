@@ -1,0 +1,118 @@
+AI-Assisted Assessment of Coding Practices
+in Modern Code Review
+Manushree Vijayvergiya
+manushree@google.com
+Google
+Zurich, Switzerland
+Małgorzata Salawa
+magorzata@google.com
+Google
+Zurich, Switzerland
+Ivan Budiselić
+ibudiselic@google.com
+Google
+Zurich, Switzerland
+Dan Zheng
+danielzheng@google.com
+Google
+Mountain View, USA
+Pascal Lamblin
+lamblinp@google.com
+Google
+Montreal, Canada
+Marko Ivanković
+markoi@google.com
+Google
+Zurich, Switzerland
+Juanjo Carin
+juanjocarin@google.com
+Google
+Sunnyvale, USA
+Mateusz Lewko
+mlewko@google.com
+Google
+Zurich, Switzerland
+Jovan Andonov
+jandonov@google.com
+Google
+Zurich, Switzerland
+Goran Petrović
+goranpetrovic@google.com
+Google
+Zurich, Switzerland
+Daniel Tarlow
+dtarlow@google.com
+Google
+Montreal, Canada
+Petros Maniatis
+maniatis@google.com
+Google
+Mountain View, USA
+René Just∗
+rjust@cs.washington.edu
+University of Washington
+Seattle, USA
+ABSTRACT
+Modern code review is a process in which an incremental code con-
+tribution made by a code author is reviewed by one or more peers
+before it is committed to the version control system. An important
+element of modern code review is verifying that code contributions
+adhere to best practices. While some of these best practices can be
+automatically verified, verifying others is commonly left to human
+reviewers. This paper reports on the development, deployment,
+and evaluation of AutoCommenter, a system backed by a large
+language model that automatically learns and enforces coding best
+practices. We implemented AutoCommenter for four programming
+languages (C++, Java, Python, and Go) and evaluated its perfor-
+mance and adoption in a large industrial setting. Our evaluation
+shows that an end-to-end system for learning and enforcing coding
+best practices is feasible and has a positive impact on the devel-
+oper workflow. Additionally, this paper reports on the challenges
+associated with deploying such a system to tens of thousands of
+developers and the corresponding lessons learned.
+CCS CONCEPTS
+• Software and its engineering →Software verification and
+validation.
+∗Work done at Google.
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for profit or commercial advantage and that copies bear this notice and the full citation
+on the first page. Copyrights for third-party components of this work must be honored.
+For all other uses, contact the owner/author(s).
+AIware ’24, July 15–16, 2024, Porto de Galinhas, Brazil
+© 2024 Copyright held by the owner/author(s).
+ACM ISBN 979-8-4007-0685-1/24/07
+https://doi.org/10.1145/3664646.3665664
+KEYWORDS
+Artificial Intelligence, Code Review, Coding Best Practices
+ACM Reference Format:
+Manushree Vijayvergiya, Małgorzata Salawa, Ivan Budiselić, Dan Zheng,
+Pascal Lamblin, Marko Ivanković, Juanjo Carin, Mateusz Lewko, Jovan An-
+donov, Goran Petrović, Daniel Tarlow, Petros Maniatis, and René Just. 2024.
+AI-Assisted Assessment of Coding Practices in Modern Code Review. In
+Proceedings of the 1st ACM International Conference on AI-Powered Software
+(AIware ’24), July 15–16, 2024, Porto de Galinhas, Brazil. ACM, New York,
+NY, USA, 9 pages. https://doi.org/10.1145/3664646.3665664
+1
+INTRODUCTION
+Modern code review [21, 23] (compared to holistic code review [8])
+has grown organically over the years in open-source and industrial
+settings. A set of common peer-review criteria have emerged [5, 20,
+21], which include coding best practices. Many companies, projects,
+and even programming languages formally define them in the form
+of “style guides” [1–4] that commonly cover the following aspects:
+• Formatting: line limits, use of whitespaces and indentation,
+placement of parentheses and brackets, etc.;
+• Naming: capitalization, brevity, descriptiveness, etc.;
+• Documentation: expected placement and content of file-level,
+function-level, and other comments;
+• Language features: use of specific language features in differ-
+ent (code) contexts;
+• Code idioms: use of code idioms to improve code clarity,
+modularity, and maintainability.
+Developers generally report high satisfaction with modern code
+review processes [23, 28]. One of their main benefits is the learning
+experience for code authors who are not familiar with the codebase,
+specific language features, or common code idioms. During a review,
+an expert developer educates the code author on best practices, in
+arXiv:2405.13565v1 [cs.SE] 22 May 2024

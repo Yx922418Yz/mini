@@ -1,0 +1,170 @@
+How Anthropic teams
+use Claude Code
+Anthropic’s internal teams are transforming their workflows with Claude Code, enabling
+developers and non-technical staff to tackle complex projects, automate tasks, and bridge
+skill gaps that previously limited their productivity.
+Through interviews with our own Claude Code power users, we’ve gathered insights on how
+different departments leverage Claude Code, its impact on their work, and tips for other
+organizations considering adoption.
+ANTHROP\C
+How Anthropic teams
+use Claude Code
+</>
+Anthropic's internal teams are transforming their workflows with Claude Code, enabling
+developers and non-technical staff to tackle complex projects, automate tasks, and bridge
+skill gaps that previously limited their productivity.
+Through interviews with our own Claude Code power users, we've gathered insights on how
+different departments leverage Claude Code, its impact on their work, and tips for other
+organizations considering adoption.
+
+Contents
+Claude Code for data infrastructure
+3
+Claude Code for product development
+5
+Claude Code for security engineering
+7
+Claude Code for inference
+9
+Claude Code for data science and visualization
+11
+Claude Code for API
+13
+Claude Code for growth marketing
+15
+Claude Code for product design
+17
+Claude Code for RL engineering
+19
+Claude Code for legal
+21
+2
+How Anthropic teams use Claude Code
+Contents
+2
+Claude Code for data infrastructure
+Claude Code for product development
+Claude Code for security engineering
+Claude Code for inference
+Claude Code for data science and visualization
+Claude Code for API
+Claude Code for growth marketing
+Claude Code for product design
+Claude Code for RL engineering
+Claude Code for legal
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+HOW ANTHROPIC TEAMS USE CLAUDE CODE
+
+Claude Code for data
+infrastructure
+The Data Infrastructure team
+organizes all business data for
+teams across the company. They
+use Claude Code for automating
+routine data engineering tasks,
+troubleshooting complex
+infrastructure issues, and
+creating documented workflows
+for technical and non-technical
+team members to access and
+manipulate data independently.
+Main Claude Code use cases
+Kubernetes debugging with screenshots
+When Kubernetes clusters went down and weren’t scheduling new pods,
+the team used Claude Code to diagnose the issue. They fed screenshots of
+dashboards into Claude Code, which guided them through Google Cloud’s
+UI menu by menu until they found a warning indicating pod IP address
+exhaustion. Claude Code then provided the exact commands to create a
+new IP pool and add it to the cluster, bypassing the need to involve
+networking specialists.
+Plain text workflows for finance team
+The team showed finance team members how to write plain text files
+describing their data workflows, then load them into Claude Code to get
+fully automated execution. Employees with no coding experience could
+describe steps like “query this dashboard, get information, run these
+queries, produce Excel output,” and Claude Code would execute the entire
+workflow, including asking for required inputs like dates.
+Codebase navigation for new hires
+When new data scientists join the team, they’re directed to use Claude
+Code to navigate their massive codebase. Claude Code reads their
+Claude.md files (documentation), identifies relevant files for specific
+tasks, explains data pipeline dependencies, and helps newcomers
+understand which upstream sources feed into dashboards. This replaces
+traditional data catalogs and discoverability tools.
+End-of-session documentation updates
+The team asks Claude Code to summarize completed work sessions and
+suggest improvements at the end of each task. This creates a continuous
+improvement loop where Claude Code helps refine the Claude.md
+documentation and workflow instructions based on actual usage, making
+subsequent iterations more effective.
+Parallel task management across multiple instances
+When working on long-running data tasks, they open multiple instances
+of Claude Code in different repositories for different projects. Each
+instance maintains full context, so when they switch back after hours or
+days, Claude Code remembers exactly what they were doing and where
+they left off, enabling true parallel workflow management without
+context loss.
+3
+Claude Code for data infrastructure
+Claude Code for data
+infrastructure
+3
+The Data Infrastructure
+team
+organizes all business data for
+teams across the company. They
+use Claude Code for automating
+routine data engineering tasks,
+troubleshooting
+complex
+infrastructureissues,and
+creating documented workflows
+for technical and non-technical
+team members to access and
+manipulate data independently.
+Main Claude Code use cases
+Kubernetes debugging with screenshots
+When Kubernetes clusters went down and weren't scheduling new pods,
+the team used Claude Code to diagnose the issue. They fed screenshots of
+dashboards into Claude Code, which guided them through Google Cloud's
+UI menu by menu until they found a warning indicating pod IP address
+exhaustion. Claude Code then provided the exact commands to create a
+new IP pool and add it to the cluster, bypassing the need to involve
+networking specialists.
+Plain text workflows for finance team
+The team showed finance team members how to write plain text files
+describing their data workflows, then load them into Claude Code to get
+fully automated execution. Employees with no coding experience could
+describe steps like "query this dashboard, get information, run these
+queries, produce Excel output," and Claude Code would execute the entire
+workflow, including asking for required inputs like dates.
+Codebase navigation for new hires
+When new data scientists join the team, they're directed to use Claude
+Code to navigate their massive codebase. Claude Code reads their
+Claude.md files (documentation), identifies relevant files for specific
+tasks, explains data pipeline dependencies, and helps newcomers
+understand which upstream sources feed into dashboards. This replaces
+traditional data catalogs and discoverability tools.
+End-of-session documentation updates
+The team asks Claude Code to summarize completed work sessions and
+suggest improvements at the end of each task. This creates a continuous
+improvement loop where Claude Code helps refine the Claude.md
+documentation and workflow instructions based on actual usage, making
+subsequent iterations more effective.
+Parallel task management across multiple instances
+When working on long-running data tasks, they open multiple instances
+of Claude Code in different repositories for different projects. Each
+instance maintains full context, so when they switch back after hours or
+days, Claude Code remembers exactly what they were doing and where
+they left off, enabling true parallel workflow management without
+context loss.
+CLAUDE CODE FOR DATA INFRASTRUCTURE

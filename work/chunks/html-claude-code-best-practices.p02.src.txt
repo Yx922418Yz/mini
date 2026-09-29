@@ -1,0 +1,12 @@
+Quickstart: walk through your first real task, from exploring a codebase to committing a fix
+Store instructions and memories: give Claude persistent instructions with CLAUDE.md files and auto memory
+Common workflows and best practices: patterns for getting the most out of Claude Code
+Settings: customize Claude Code for your workflow
+Troubleshooting: solutions for common issues
+code.claude.com: demos, pricing, and product details
+Was this page helpful?
+
+Quickstart
+⌘ I
+Assistant
+Responses are generated using AI and may contain mistakes.

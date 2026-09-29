@@ -1,0 +1,161 @@
+Claude Code for data
+infrastructure
+Team impact
+Resolved infrastructure problems without specialized expertise
+Resolved Kubernetes cluster issues that would normally require pulling in
+systems or networking team members, using Claude Code to diagnose
+problems and provide exact fixes.
+Accelerated onboarding
+New data analysts and team members can quickly understand complex
+systems and contribute meaningfully without extensive guidance.
+Enhanced support workflow
+Can process much larger data volumes and identify anomalies (like
+monitoring 200 dashboards) that would be impossible for humans to
+review manually.
+Enabled cross-team self-service
+Finance teams with no coding experience can now execute complex data
+workflows independently.
+Top tips from the
+Data Infrastructure
+team
+Write detailed Claude.md files
+The better you document your workflows, tools, and expectations in
+Claude.md files, the better Claude Code performs. This made Claude Code
+excel at routine tasks like setting up new data pipelines when you have
+existing patterns.
+Use MCP servers instead of CLI for sensitive data
+They recommend using MCP servers rather than the BigQuery CLI to
+maintain better security control over what Claude Code can access,
+especially for handling sensitive data that requires logging or has
+potential privacy concerns.
+Share team usage sessions
+The team held sessions where members demonstrated their Claude Code
+workflows to each other. This helped spread best practices and showed
+different ways to use the tool they might not have discovered on
+their own.
+4
+Claude Code for data infrastructure
+Claude Code for data
+infrastructure
+Team impact
+Top tips from the
+Data Infrastructure
+team
+4
+Resolved infrastructure problems without specialized expertise
+Resolved Kubernetes cluster issues that would normally require pulling in
+systems or networking team members, using Claude Code to diagnose
+problems and provide exact fixes.
+Accelerated onboarding
+New data analysts and team members can quickly understand complex
+systems and contribute meaningfully without extensive guidance.
+Enhanced support workflow
+Can process much larger data volumes and identify anomalies (like
+monitoring 200 dashboards) that would be impossible for humans to
+review manually.
+Enabled cross-team self-service
+Finance teams with no coding experience can now execute complex data
+workflows independently.
+Write detailed Claude.md files
+The better you document your workflows, tools, and expectations in
+Claude.md files, the better Claude Code performs. This made Claude Code
+excel at routine tasks like setting up new data pipelines when you have
+existing patterns.
+Use MCP servers instead of CLI for sensitive data
+They recommend using MCP servers rather than the BigQuery CLI to
+maintain better security control over what Claude Code can access,
+especially for handling sensitive data that requires logging or has
+potential privacy concerns.
+Share team usage sessions
+The team held sessions where members demonstrated their Claude Code
+workflows to each other. This helped spread best practices and showed
+different ways to use the tool they might not have discovered on
+their own.
+CLAUDE CODE FOR DATA INFRASTRUCTURE
+
+Claude Code for product
+development
+The Claude Code team uses their
+own product to build updates to
+Claude Code, expanding the
+product’s enterprise capabilities
+and agentic loop functionalities.
+Main Claude Code use cases
+Fast prototyping with auto-accept mode
+Engineers use Claude Code for rapid prototyping by enabling “auto-
+accept mode” (shift+tab) and setting up autonomous loops where Claude
+writes code, runs tests, and iterates continuously. They give Claude
+abstract problems they’re unfamiliar with, let it work autonomously, then
+review the 80% complete solution before taking over for final refinements.
+Teams emphasize starting from a clean git state and committing
+checkpoints regularly so they can easily revert any incorrect changes
+if Claude goes off track.
+Synchronous coding for core features
+For more critical features touching the application’s business logic, the
+team works synchronously with Claude Code, giving detailed prompts
+with specific implementation instructions. They monitor the process in
+real-time to ensure code quality, style guide compliance, and proper
+architecture while letting Claude handle the repetitive coding work.
+Building Vim mode
+One of their most successful async projects was implementing Vim
+key bindings for Claude Code. They asked Claude to build the entire
+feature (despite it not being a priority), and roughly 70% of the final
+implementation came from Claude’s autonomous work, requiring
+only a few iterations to complete.
+Test generation and bug fixes
+They use Claude Code to write comprehensive tests after implementing
+features and handle simple bug fixes identified in pull request reviews.
+They also leverage GitHub Actions integration to have Claude
+automatically address Pull Request comments like formatting issues
+or function renaming.
+Codebase exploration
+When working with unfamiliar codebases (like the monorepo or API
+side), the team uses Claude Code to quickly understand how systems
+work. Instead of waiting for Slack responses, they ask Claude directly
+for explanations and code references, saving significant time in
+context switching.
+5
+Claude Code for product development
+Claude Code for product
+development
+5
+The Claude Code team uses their
+own product to build updates to
+Claude Code, expanding the
+product's enterprise capabilities
+and agentic loop functionalities.
+Main Claude Code use cases
+Fast prototyping with auto-accept mode
+Engineers use Claude Code for rapid prototyping by enabling "auto-
+accept mode" (shift+tab) and setting up autonomous loops where Claude
+writes code, runs tests, and iterates continuously. They give Claude
+abstract problems they're unfamiliar with, let it work autonomously, then
+review the 80% complete solution before taking over for final refinements.
+Teams emphasize starting from a clean git state and committing
+checkpoints regularly so they can easily revert any incorrect changes
+if Claude goes off track.
+Synchronous coding for core features
+For more critical features touching the application's business logic, the
+team works synchronously with Claude Code, giving detailed prompts
+with specific implementation instructions. They monitor the process in
+real-time to ensure code quality, style guide compliance, and proper
+architecture while letting Claude handle the repetitive coding work.
+Building Vim mode
+One of their most successful async projects was implementing Vim
+key bindings for Claude Code. They asked Claude to build the entire
+feature (despite it not being a priority), and roughly 70% of the final
+implementation came from Claude's autonomous work, requiring
+only a few iterations to complete.
+Test generation and bug fixes
+They use Claude Code to write comprehensive tests after implementing
+features and handle simple bug fixes identified in pull request reviews.
+They also leverage GitHub Actions integration to have Claude
+automatically address Pull Request comments like formatting issues
+or function renaming.
+Codebase exploration
+When working with unfamiliar codebases (like the monorepo or API
+side), the team uses Claude Code to quickly understand how systems
+work. Instead of waiting for Slack responses, they ask Claude directly
+for explanations and code references, saving significant time in
+context switching.
+CLAUDE CODE FOR PRODUCT DEVELOPMENT

@@ -1,0 +1,82 @@
+Claude Code for legal
+Work style and impact
+Planning in Claude.ai, building in Claude Code
+They use a two-step process where they brainstorm and plan with
+Claude.ai first, then move to Claude Code for implementation, asking it
+to slow down and work step-by-step rather than outputting everything
+at once.
+Visual-first approach
+They frequently use screenshots to show Claude Code what they want
+interfaces to look like, then iterate based on visual feedback rather than
+describing features in text.
+Prototype-driven innovation
+They emphasize overcoming the fear of sharing “silly” or “toy”
+prototypes, as these demonstrations inspire others to see possibilities
+they hadn’t considered.
+Security and
+compliance awareness
+MCP integration concerns
+As product lawyers, they immediately identify security implications of
+deep MCP integrations, noting how conservative security postures will
+create barriers as AI tools access more sensitive systems.
+Compliance tooling priorities
+They advocate for building compliance tools quickly as AI
+capabilities expand, recognizing the balance between innovation
+and risk management.
+Top tips from the
+Legal Department
+Plan extensively in Claude.ai first
+Use Claude’s conversational interface to flesh out your entire idea before
+moving to Claude Code. Then ask Claude to summarize everything into a
+step-by-step prompt for implementation.
+Work incrementally and visually
+Ask Claude Code to slow down and implement one step at a time so you
+can copy-paste without getting overwhelmed. Use screenshots liberally to
+show what you want interfaces to look like.
+Share prototypes despite imperfection
+Overcome the urge to hide “toy” projects or unfinished work - sharing
+prototypes helps others see possibilities and sparks innovation across
+departments that don’t typically interact.
+22
+Claude Code for legal
+Claude Code for legal
+Work style and impact
+Security and
+compliance awareness
+Top tips from the
+Legal Department
+22
+Planning in Claude.ai, building in Claude Code
+They use a two-step process where they brainstorm and plan with
+Claude.ai first, then move to Claude Code for implementation, asking it
+to slow down and work step-by-step rather than outputting everything
+at once.
+Visual-first approach
+They frequently use screenshots to show Claude Code what they want
+interfaces to look like, then iterate based on visual feedback rather than
+describing features in text.
+Prototype-driven innovation
+They emphasize overcoming the fear of sharing "silly" or "toy"
+prototypes, as these demonstrations inspire others to see possibilities
+they hadn't considered.
+MCP integration concerns
+As product lawyers, they immediately identify security implications of
+deep MCP integrations, noting how conservative security postures will
+create barriers as AI tools access more sensitive systems.
+Compliance tooling priorities
+They advocate for building compliance tools quickly as AI
+capabilities expand, recognizing the balance between innovation
+and risk management.
+Plan extensively in Claude.ai first
+Use Claude's conversational interface to flesh out your entire idea before
+moving to Claude Code. Then ask Claude to summarize everything into a
+step-by-step prompt for implementation.
+Work incrementally and visually
+Ask Claude Code to slow down and implement one step at a time so you
+can copy-paste without getting overwhelmed. Use screenshots liberally to
+show what you want interfaces to look like.
+Share prototypes despite hnperfection
+Overcome the urge to hide "toy" projects or unfinished work - sharing
+prototypes helps others see possibilities and sparks innovation across
+departments that don't typically interact.
+CLAUDE CODE FOR LEGAL

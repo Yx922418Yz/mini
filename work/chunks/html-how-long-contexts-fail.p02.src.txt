@@ -1,0 +1,17 @@
+Fortunately, there are solutions!
+
+In an upcoming post we’ll cover techniques for mitigating or avoding these issues, from methods for dynamically loading tools to spinning up context quarantines.
+
+Read the follow up article, “How to Fix Your Context“
+Gemini 2.5 and GPT-4.1 have 1 million token context windows, large enough to throw Infinite Jest in there, with plenty of room to spare.
+
+↩
+The “Long form text” section in the Gemini docs sum up this optmism nicely.
+
+↩
+In fact, in the Databricks study cited above, a frequent way models would fail when given long contexts is they’d return summarizations of the provided context, while ignoring any instructions contained within the prompt.
+
+↩
+If you’re on the leaderboard, pay attention to the, “Live (AST)” columns.
+
+These metrics use real-world tool definitions contributed to the product by enterprise, “avoiding the drawbacks of dataset contamination and biased benchmarks.” ↩

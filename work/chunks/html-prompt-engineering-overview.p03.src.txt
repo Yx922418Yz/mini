@@ -1,0 +1,167 @@
+Develop key marketing messages.
+
+3.
+
+Choose appropriate marketing channels."
+Tactic
+Prompt Example
+Use precise language and avoid ambiguity
+Instead of: "Write something about climate change," use: "Write a persuasive essay arguing for the implementation of stricter carbon emission regulations."
+Quantify your requests whenever possible
+Instead of: "Write a long poem," use: "Write a sonnet with 14 lines that explores themes of love and loss."
+Break down complex tasks into smaller steps
+Instead of: "Create a marketing plan," use: "1.
+
+Identify the target audience.
+
+2.
+
+Develop key marketing messages.
+
+3.
+
+Choose appropriate marketing channels."
+5.
+
+Iterate and Experiment:
+Tactic
+Action
+Try different phrasings and keywords
+Rephrase your prompt using synonyms or alternative sentence structures.
+
+Adjust the level of detail and specificity
+Add or remove information to fine-tune the output.
+
+Test different prompt lengths
+Experiment with both shorter and longer prompts to find the optimal balance.
+
+Tactic
+Action
+Try different phrasings and keywords
+Rephrase your prompt using synonyms or alternative sentence structures.
+
+Adjust the level of detail and specificity
+Add or remove information to fine-tune the output.
+
+Test different prompt lengths
+Experiment with both shorter and longer prompts to find the optimal balance.
+
+6.
+
+Leverage Chain of Thought Prompting:
+Tactic
+Prompt Example
+Encourage step-by-step reasoning
+"Solve this problem step-by-step: John has 5 apples, he eats 2.
+
+How many apples does he have left?
+
+Step 1: John starts with 5 apples.
+
+Step 2: He eats 2 apples, so we need to subtract 2 from 5.
+
+Step 3: 5 - 2 = 3.
+
+Answer: John has 3 apples left."
+Ask the model to explain its reasoning process
+"Explain your thought process in determining the sentiment of this movie review: 'The acting was superb, but the plot was predictable.'"
+Guide the model through a logical sequence of thought
+"To classify this email as spam or not spam, consider the following: 1.
+
+Is the sender known?
+
+2.
+
+Does the subject line contain suspicious keywords?
+
+3.
+
+Is the email offering something too good to be true?"
+Tactic
+Prompt Example
+Encourage step-by-step reasoning
+"Solve this problem step-by-step: John has 5 apples, he eats 2.
+
+How many apples does he have left?
+
+Step 1: John starts with 5 apples.
+
+Step 2: He eats 2 apples, so we need to subtract 2 from 5.
+
+Step 3: 5 - 2 = 3.
+
+Answer: John has 3 apples left."
+Ask the model to explain its reasoning process
+"Explain your thought process in determining the sentiment of this movie review: 'The acting was superb, but the plot was predictable.'"
+Guide the model through a logical sequence of thought
+"To classify this email as spam or not spam, consider the following: 1.
+
+Is the sender known?
+
+2.
+
+Does the subject line contain suspicious keywords?
+
+3.
+
+Is the email offering something too good to be true?"
+For further guidance on prompt engineering best practices, explore the Five Best Practices for Prompt Engineering on Google Cloud.
+
+Benefits of prompt engineering
+Effective prompt engineering offers numerous benefits, enhancing the capabilities and usability of AI models:
+Improved model performance
+Well-crafted prompts lead to more accurate, relevant, and informative outputs from AI models, as they provide clear instructions and context.
+
+Reduced bias and harmful responses
+By carefully controlling the input and guiding the AI's focus, prompt engineering helps mitigate bias and minimize the risk of generating inappropriate or offensive content.
+
+Increased control and predictability
+Prompt engineering empowers you to influence the AI's behavior and ensure consistent and predictable responses aligned with your desired outcomes.
+
+Enhanced user experience
+Clear and concise prompts make it easier for users to interact effectively with AI models, leading to more intuitive and satisfying experiences.
+
+Start your AI journey with Google Cloud
+New customers get $300 in free credits to spend on Google Cloud.
+
+Get started
+Talk to a Google Cloud sales specialist to discuss your unique challenge in more detail.
+
+Contact us
+Related Google Cloud products and services
+See all AI products and solutions
+Vertex AI Platform
+A single platform for data scientists and engineers to create, train, test, monitor, tune, and deploy ML and AI models.
+
+Generative AI on Vertex AI
+Rapidly prototype and test generative AI models.
+
+Test sample prompts, design your own prompts, and customize foundation models and LLMs.
+
+AI APIs
+Easily integrate AI into your applications with Google Cloud's AI and machine learning APIs.
+
+Solution
+Model Garden on Vertex AI
+Jumpstart your ML project with a single place to discover, customize, and deploy a wide variety of models from Google and Google partners.
+
+Additional learning resources to get started
+New to Google Cloud or generative AI?
+
+New customers get $300 in free credits to run, test, and deploy workloads.
+
+Training: No cost generative AI fundamentals course
+Documentation: Introduction to prompt design
+Documentation: General prompt design strategies
+Documentation: Generative AI prompt samples
+Take the next step
+Start building on Google Cloud with $300 in free credits and 20+ always free products.
+
+Get started for free
+Need help getting started?
+
+Contact sales
+Work with a trusted partner
+Find a partner
+Continue browsing
+See all products

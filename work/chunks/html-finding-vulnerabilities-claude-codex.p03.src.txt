@@ -1,0 +1,85 @@
+Many times, it couldn't find security issues that we were getting when we prompted Claude Code to search for one specific kind of security issue at a time.
+
+We ran this command on PY-APP-003, PY-APP-002, and PY-APP-008, and it only found one XSS across all of them, which is very different from the results we got in the overall experiment.
+
+Answering Our Questions
+Let's revisit our initial research questions based on what we've learned.
+
+What are the FP/FN rates?
+
+For raw AI on real-world code, the false positive rate is very high, ranging from at best 53% for Path Traversal for Codex or 78% for IDOR for Claude Code to at worst 95% with SQL injection for Claude Code and 100% for SQL injection or IDOR for Codex.
+
+The performance varies dramatically by application too, from 100% (10/10) real IDOR in PY-APP-002 (Claude Code) to 0% (0/7) for PY-APP-007.
+
+Across all apps and all reported issues, Claude Code found 46 vulnerabilities (14% TPR, 86% FPR) and Codex reported 21 vulnerabilities (18% TPR, 82% FPR).
+
+Since we've been using real applications, we can't accurately measure false negatives in this experiment.
+
+We'll cover techniques for measuring false negative rates in an upcoming blog post!
+
+Why does it fail?
+
+The primary weakness we observed is a lack of deep, semantic understanding of code execution for injection issues.
+
+Models struggle with inter-procedural taint flow and implicit flows, the things traditional SAST engines are usually built for.
+
+Some of the limitations are also coming from context compaction and context rot.
+
+We will continue to explore these limitations in more detail and explore solutions to mitigate them.
+
+How important are scaffolding and agentic workflows?
+
+They are not just important; they are becoming essential.
+
+The future of AI in security review is not a single, monolithic model but a system of AI agents (including coding agents like in our cases) that can use tools, reason about evidence, and collaborate to find and validate vulnerabilities.
+
+While we don't (yet) have data here on the difference between using an agent with access to Claude Code versus more typical context engineering (that is, building the scaffolding to provide all of the relevant code) with reasoning model, we observed a huge difference in the system's ability to work through a complex process and make educated decisions on the way to reporting security issues.
+
+That being said, a counterexample of this is how Sean Heelan was able to do enough context engineering to get a reasoning model to report a vulnerability (8% of the time).
+
+We really suggest you read his blog post.
+
+How about the cost in all of this?
+
+Unfortunately, we haven't been able to track uniformly the cost between Claude Code and Codex.
+
+The overall cost of Claude Code was $114, for all these vulnerabilities and all these apps (except running for non-determinism and for /security-review command).
+
+Dataset: Future Release
+We are not releasing a dataset today nor the names of the open source applications analyzed because we're in the process of responsible disclosure, reaching out to the application developers to get all the security issues fixed and validated.
+
+Once that's done, we'll be comfortable releasing the data.
+
+Conclusion
+LLMs are not a silver bullet that will replace human security engineers tomorrow, in fact they are pretty weak on finding high-severity injection-style vulnerabilities end to end.
+
+However, they are an incredibly powerful tool.
+
+Our research indicates that by understanding their strengths (contextual reasoning) and weaknesses (deep semantics of the code), and by building sophisticated agentic systems around them using advanced static analysis engines, we can create a new generation of security tooling that is far more powerful than anything that has come before.
+
+[1] Scripted simple prompt for Claude Code and Codex
+BATCH_PROMPT_TEMPLATE = """
+I am a core developer of this app.
+
+It's been reported to me that
+there are several {vuln_type} vulnerabilities in the code base.
+
+I need
+your expertise to find all of them!
+
+# Instructions
+- Find all {vuln_type} vulnerabilities in my code, don't worry about
+third-party code.
+
+- Explain why they are real security vulnerabilities I should care about; give
+code snippets from the code to support your analysis (trace from entry points);
+maybe some clue on how to trigger the issue for testing.
+
+- Report all {vuln_type} vulnerabilities using the SARIF JSON format that you will
+write within the <SARIF_OUTPUT>...</SARIF_OUTPUT> tag; make sure it's valid JSON.
+
+- Fix these security issues in the code.
+
+Don't ask for confirmation, just do it.
+
+"""

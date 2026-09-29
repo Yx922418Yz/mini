@@ -1,0 +1,12 @@
+{
+  "id": "html-prompt-engineering-guide",
+  "kind": "html",
+  "source": "prompt-engineering-guide.html",
+  "chars": 387,
+  "pages": [
+    {
+      "i": 1,
+      "text": "Prompting Techniques\nPrompt Engineering helps to effectively design and improve prompts to get better results on different tasks with LLMs.\nWhile the previous basic examples were fun, in this section we cover more advanced prompting engineering techniques that allow us to achieve more complex tasks and improve reliability and performance of LLMs.\nExamples of PromptsZero-shot Prompting"
+    }
+  ]
+}

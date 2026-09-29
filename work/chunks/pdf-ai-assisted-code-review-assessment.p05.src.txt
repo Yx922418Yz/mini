@@ -1,0 +1,82 @@
+AI-Assisted Assessment of Coding Practices in Modern Code Review
+AIware ’24, July 15–16, 2024, Porto de Galinhas, Brazil
+Figure 3: Example comment posted by AutoCommenter.
+4
+DEPLOYMENT
+We deployed AutoCommenter to all developers at Google over a
+period of time between July 2022 and October 2023:
+• until Jul. 2022—teamfooding: this paper’s authors.
+• Jul. 2022—early adopters: around 3 thousand volunteers.
+• Jul. 2023—A/B experiment: about half of all developers.
+• since Oct. 2023—general availability: all developers.
+Note that due to industrial confidentiality reasons we are unable
+to disclose absolute numbers of code reviews, developers, files,
+comments, or distribution of duration of code reviews. We report
+on relative measures, where appropriate, and relevant trends.
+We continuously evaluated and improved the performance of
+AutoCommenter, using an iterative refinement approach:
+• Evaluation on historical data (section 3.3) to get directional
+insight into how well the model does at the task and to define
+thresholds and select a decoding strategy.
+• Monitoring and analysis of user interaction and direct feed-
+back through feedback buttons and issue reports.
+• Targeted human evaluation based on patterns observed dur-
+ing other evaluation steps.
+Figure 4 shows the ratio of positive to negative developer feed-
+back on posted code review comments and IDE diagnostics over
+time. The dashed line shows the total count of feedback clicks de-
+velopers provided per month. As is expected, this count is much
+lower during the early-adopter stage. Additionally, the volatility is
+higher in this stage because we actively refined AutoCommenter.
+Recall the three feedback buttons within the code review system
+(figure 3), which allow developers to express positive and negative
+sentiment about a posted comment. We consider comments with a
+thumbs up or “Please fix” as positive, and comments with a thumbs
+down as negative; we define the useful ratio as the ratio of positive
+comments to all comments with feedback.
+The remainder of this section describes specific observations
+and corresponding refinements that we made during deployment.
+4.1
+Selecting Threshold and Decoding Strategy
+4.1.1
+Threshold. During initial deployment we wanted to carefully
+manage the trust developers had in AutoCommenter and started
+with a high confidence threshold of 𝑡= 0.98. We manually sampled
+Figure 4: Developer feedback throughout deployment.
+several hundred results and observed that around 80% of predictions
+below the threshold were still correct—that is, the false-negative
+rate was very high at 𝑡= 0.98. Additionally, we observed that
+predictions in Python showed a significantly different distribution
+of confidence scores, which were disproportionately impacted by
+thresholding. We conjecture that the training dataset composition
+(number of distinct URLs and URL frequencies) and specificity of the
+best practice documents are reasons, but leave a deeper investiga-
+tion to future work. An attempt to deploy per-language thresholds
+proved ineffective as a single threshold per language still did not
+adequately capture the model’s ability to correctly predict hundreds
+of diverse best practices. This led to a lack of diversity in predicted
+URLs as the model tended to produce higher scores for some URLs
+vs. others, irrespective of correctness. These observations led to the
+first major change to AutoCommenter: per-URL thresholds com-
+puted based on the intrinsic evaluation on the validation dataset.
+4.1.2
+Decoding. An evaluation using per-URL thresholds with
+greedy decoding on full historical code reviews revealed that Auto-
+Commenter detects violations in 6% of all changed files. However,
+80% of comments would have been posted on lines of code not
+modified by the author. Developers typically do not take action on
+unchanged code. Consequently, AutoCommenter filters generated
+comments on unchanged lines of code, reducing the ratio of com-
+ments in changed files to 1.3%. In order to increase this ratio, we
+experimented with different decoding strategies: greedy (default),
+beam search, top-k, and top-p sampling. We settled on beam search
+(generating 𝑛= 4 potential responses), which tripled the posting
+frequency to 3.9%. It also yielded a substantially higher URL diver-
+sity: the 10 most-frequently posted URLs accounted for 41% of all
+comments, compared to 80% for greedy search.
+Latency is another important aspect when choosing a decoding
+strategy for deployment. While beam search increased the posting
+frequency and diversity, inference became noticeably slower (me-
+dian latency of 2 seconds). Given that this latency is prohibitive
+for interactive use in the IDE, we ultimately decided to use beam
+search for the code review system and greedy search for the IDE.

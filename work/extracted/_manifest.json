@@ -1,0 +1,212 @@
+[
+  {
+    "id": "pdf-ai-assisted-code-review-assessment",
+    "kind": "pdf",
+    "source": "ai-assisted-code-review-assessment.pdf",
+    "chars": 53103
+  },
+  {
+    "id": "pdf-how-anthropic-uses-claude-code",
+    "kind": "pdf",
+    "source": "how-anthropic-uses-claude-code.pdf",
+    "chars": 73451
+  },
+  {
+    "id": "pdf-how-openai-uses-codex",
+    "kind": "pdf",
+    "source": "how-openai-uses-codex.pdf",
+    "chars": 12589
+  },
+  {
+    "id": "html-agentic-ai-threats",
+    "kind": "html",
+    "source": "agentic-ai-threats.html",
+    "chars": 48588
+  },
+  {
+    "id": "html-ai-code-review-best-practices",
+    "kind": "html",
+    "source": "ai-code-review-best-practices.html",
+    "chars": 14078
+  },
+  {
+    "id": "html-benefits-agentic-ai-oncall",
+    "kind": "html",
+    "source": "benefits-agentic-ai-oncall.html",
+    "chars": 6864
+  },
+  {
+    "id": "html-claude-code-best-practices",
+    "kind": "html",
+    "source": "claude-code-best-practices.html",
+    "chars": 9529
+  },
+  {
+    "id": "html-code-review-essentials",
+    "kind": "html",
+    "source": "code-review-essentials.html",
+    "chars": 11917
+  },
+  {
+    "id": "html-code-reviews-just-do-it",
+    "kind": "html",
+    "source": "code-reviews-just-do-it.html",
+    "chars": 3359
+  },
+  {
+    "id": "html-context-rot",
+    "kind": "html",
+    "source": "context-rot.html",
+    "chars": 49845
+  },
+  {
+    "id": "html-copilot-prompt-injection-rce",
+    "kind": "html",
+    "source": "copilot-prompt-injection-rce.html",
+    "chars": 7254
+  },
+  {
+    "id": "html-devin-coding-agents-101",
+    "kind": "html",
+    "source": "devin-coding-agents-101.html",
+    "chars": 21433
+  },
+  {
+    "id": "html-finding-vulnerabilities-claude-codex",
+    "kind": "html",
+    "source": "finding-vulnerabilities-claude-codex.html",
+    "chars": 22517
+  },
+  {
+    "id": "html-good-context-good-code",
+    "kind": "html",
+    "source": "good-context-good-code.html",
+    "chars": 55
+  },
+  {
+    "id": "html-how-long-contexts-fail",
+    "kind": "html",
+    "source": "how-long-contexts-fail.html",
+    "chars": 9986
+  },
+  {
+    "id": "html-how-to-review-code-effectively",
+    "kind": "html",
+    "source": "how-to-review-code-effectively.html",
+    "chars": 19606
+  },
+  {
+    "id": "html-how-warp-uses-warp",
+    "kind": "html",
+    "source": "how-warp-uses-warp.html",
+    "chars": 6
+  },
+  {
+    "id": "html-kubernetes-troubleshooting-ai",
+    "kind": "html",
+    "source": "kubernetes-troubleshooting-ai.html",
+    "chars": 9377
+  },
+  {
+    "id": "html-lessons-from-ai-code-reviews",
+    "kind": "html",
+    "source": "lessons-from-ai-code-reviews.html",
+    "chars": 0
+  },
+  {
+    "id": "html-mcp-food-for-thought",
+    "kind": "html",
+    "source": "mcp-food-for-thought.html",
+    "chars": 4308
+  },
+  {
+    "id": "html-mcp-introduction",
+    "kind": "html",
+    "source": "mcp-introduction.html",
+    "chars": 30818
+  },
+  {
+    "id": "html-mcp-registry-preview",
+    "kind": "html",
+    "source": "mcp-registry-preview.html",
+    "chars": 5250
+  },
+  {
+    "id": "html-mcp-server-authentication",
+    "kind": "html",
+    "source": "mcp-server-authentication.html",
+    "chars": 12029
+  },
+  {
+    "id": "html-multi-agent-systems-ai-native",
+    "kind": "html",
+    "source": "multi-agent-systems-ai-native.html",
+    "chars": 14224
+  },
+  {
+    "id": "html-observability-basics",
+    "kind": "html",
+    "source": "observability-basics.html",
+    "chars": 12094
+  },
+  {
+    "id": "html-owasp-top-ten",
+    "kind": "html",
+    "source": "owasp-top-ten.html",
+    "chars": 16207
+  },
+  {
+    "id": "html-peeking-under-the-hood-of-claude-code",
+    "kind": "html",
+    "source": "peeking-under-the-hood-of-claude-code.html",
+    "chars": 294
+  },
+  {
+    "id": "html-prompt-engineering-guide",
+    "kind": "html",
+    "source": "prompt-engineering-guide.html",
+    "chars": 387
+  },
+  {
+    "id": "html-prompt-engineering-overview",
+    "kind": "html",
+    "source": "prompt-engineering-overview.html",
+    "chars": 23244
+  },
+  {
+    "id": "html-sast-vs-dast",
+    "kind": "html",
+    "source": "sast-vs-dast.html",
+    "chars": 20841
+  },
+  {
+    "id": "html-specs-are-the-new-source-code",
+    "kind": "html",
+    "source": "specs-are-the-new-source-code.html",
+    "chars": 11840
+  },
+  {
+    "id": "html-sre-introduction",
+    "kind": "html",
+    "source": "sre-introduction.html",
+    "chars": 25907
+  },
+  {
+    "id": "html-warp-vs-claude-code",
+    "kind": "html",
+    "source": "warp-vs-claude-code.html",
+    "chars": 3731
+  },
+  {
+    "id": "html-writing-effective-tools-for-agents",
+    "kind": "html",
+    "source": "writing-effective-tools-for-agents.html",
+    "chars": 21836
+  },
+  {
+    "id": "site-themodernsoftware",
+    "kind": "site",
+    "source": "index.html",
+    "chars": 7830
+  }
+]

@@ -1,0 +1,140 @@
+Claude Code for RL engineering
+Development
+workflow impact
+Experimental approach enabled
+They now use a “try and rollback” methodology, frequently committing
+checkpoints so they can test Claude’s autonomous implementation
+attempts and revert if needed, enabling more experimental.
+Documentation acceleration
+Claude Code automatically adds helpful comments that save significant
+time on documentation, though they note it sometimes adds comments
+in odd places or uses questionable code organization.
+Speed-up with limitations
+While Claude Code can implement small-to-medium PRs with “relatively
+little time” from them, they acknowledge it only works on first attempt
+about one-third of the time, requiring either additional guidance or
+manual intervention.
+Top tips from the
+RL Engineering team
+Customize your Claude.md file for specific patterns
+Add instructions to your Claude.md file to prevent Claude from making
+repeated tool-calling mistakes, such as telling it to “run pytest not run and
+don’t cd unnecessarily - just use the right path.” This significantly
+improved consistency.
+Use a checkpoint-heavy workflow
+Regularly commit your work as Claude makes changes so you can easily
+roll back when experiments don’t work out. This enables a more
+experimental approach to development without risk.
+Try one-shot first, then collaborate
+Give Claude a quick prompt and let it attempt the full implementation
+first. If it works (about one-third of the time), you’ve saved significant
+time. If not, then switch to a more collaborative, guided approach.
+20
+Claude Code for RL engineering
+Claude Code for RL engineering
+Development
+workflow impact
+Top tips from the
+RL Engineering team
+20
+Experimental approach enabled
+They now use a "try and rollback" methodology, frequently committing
+checkpoints so they can test Claude's autonomous implementation
+attempts and revert if needed, enabling more experimental.
+Documentation acceleration
+Claude Code automatically adds helpful comments that save significant
+time on documentation, though they note it sometimes adds comments
+in odd places or uses questionable code organization.
+Speed-up with limitations
+While Claude Code can implement small-to-medium PRs with "relatively
+little time" from them, they acknowledge it only works on first attempt
+about one-third of the time, requiring either additional guidance or
+manual intervention.
+Customize your Claude.md file for specific patterns
+Add instructions to your Claude.md file to prevent Claude from making
+repeated tool-calling mistakes, such as telling it to "run pytest not run and
+don't cd unnecessarily - just use the right path." This significantly
+improved consistency.
+Use a checkpoint-heavy workflow
+Regularly commit your work as Claude makes changes so you can easily
+roll back when experiments don't work out. This enables a more
+experimental approach to development without risk.
+Try one-shot first, then collaborate
+Give Claude a quick prompt and let it attempt the full implementation
+first. Ifit works (about one-third of the time), you've saved significant
+time. If not, then switch to a more collaborative, guided approach.
+CLAUDE CODE FOR RL ENGINEERING
+
+Claude Code for legal
+The Legal team discovered
+Claude Code’s potential through
+experimentation, and a desire to
+learn about Anthropic’s product
+offerings. Additionally, one team
+member had a personal use case
+related to creating accessibility
+tools for family and work
+prototypes that demonstrate
+the technology’s power for
+non-developers.
+Main Claude Code use cases
+Custom accessibility solution for family members
+Team members have built communication assistants for family members
+with speaking difficulties due to medical diagnoses. In just one hour, they
+created a predictive text app using native speech-to-text that suggests
+responses and speaks them using voice banks, solving gaps in existing
+accessibility tools recommended by speech therapists.
+Legal department workflow automation
+They created prototype “phone tree” systems to help team members
+connect with the right lawyer at Anthropic, demonstrating how legal
+departments can build custom tools for common tasks without traditional
+development resources.
+Team coordination tools
+Managers have built G Suite applications that automate weekly team
+updates and track legal review status across products, allowing lawyers to
+quickly flag items needing review through simple button clicks rather
+than spreadsheet management.
+Rapid prototyping for solution validation
+They use Claude Code to quickly build functional prototypes they can
+show to domain experts (like showing accessibility tools to UCSF
+specialists) to validate ideas and identify existing solutions before
+investing more time.
+21
+Claude Code for legal
+Claude Code for legal
+21
+The Legal team discovered
+Claude Code's potential through
+experimentation,
+and a desire to
+learn about Anthropic's product
+offerings. Additionally, one team
+member had a personal use case
+related to creating accessibility
+tools for fomily and work
+prototypes that demonstrate
+the technology's power for
+non-developers.
+Main Claude Code use cases
+Custom accessibility solution for family members
+Team members have built communication assistants for family members
+with speaking difficulties due to medical diagnoses. In just one hour, they
+created a predictive text app using native speech-to-text that suggests
+responses and speaks them using voice banks, solving gaps in existing
+accessibility tools recommended by speech therapists.
+Legal department workflow automation
+They created prototype "phone tree" systems to help team members
+connect with the right lawyer at Anthropic, demonstrating how legal
+departments can build custom tools for common tasks without traditional
+development resources.
+Team coordination tools
+Managers have built G Suite applications that automate weekly team
+updates and track legal review status across products, allowing lawyers to
+quickly flag items needing review through simple button clicks rather
+than spreadsheet management.
+Rapid prototyping for solution validation
+They use Claude Code to quickly build functional prototypes they can
+show to domain experts (like showing accessibility tools to UCSF
+specialists) to validate ideas and identify existing solutions before
+investing more time.
+CLAUDE CODE FOR LEGAL

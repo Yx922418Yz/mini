@@ -1,0 +1,154 @@
+Claude Code for inference
+Team impact
+Accelerated ML concept learning
+Research time reduced by 80% - what took an hour of Google searching
+now takes 10-20 minutes.
+Faster codebase navigation
+Can find relevant files and understand system architecture in seconds
+instead of asking colleagues.
+Comprehensive test coverage
+Claude automatically generates unit tests with edge cases, relieving
+mental burden while maintaining code quality.
+Language barrier elimination
+Can implement functionality in unfamiliar languages like Rust without
+needing to learn it.
+Top tips from the
+Inference team
+Test knowledge base functionality first
+Try asking various questions to see if Claude can answer faster than
+Google search. If it’s faster and more accurate, it’s a valuable time-saving
+tool for your workflow.
+Start with code generation
+Give Claude specific instructions and ask it to write logic, then verify
+correctness. This helps build trust in the tool’s capabilities before using it
+for more complex tasks.
+Use it for test writing
+Having Claude write unit tests relieves significant pressure from daily
+development work. Leverage this feature to maintain code quality without
+spending time thinking through all test cases manually.
+10
+Claude Code for inference
+Claude Code for inference
+Team impact
+Top tips from the
+Inference team
+10
+Accelerated ML concept learning
+Research time reduced by 80% - what took an hour of Google searching
+now takes 10-20 minutes.
+Faster codebase navigation
+Can find relevant files and understand system architecture in seconds
+instead of asking colleagues.
+Comprehensive test coverage
+Claude automatically generates unit tests with edge cases, relieving
+mental burden while maintaining code quality.
+Language barrier elimination
+Can implement functionality in unfamiliar languages like Rust without
+needing to learn it.
+Test knowledge base functionality first
+Try asking various questions to see if Claude can answer faster than
+Google search. If it's faster and more accurate, it's a valuable time-saving
+tool for your workflow.
+Start with code generation
+Give Claude specific instructions and ask it to write logic, then verify
+correctness. This helps build trust in the tool's capabilities before using it
+for more complex tasks.
+Use it for test writing
+Having Claude write unit tests relieves significant pressure from daily
+development work. Leverage this feature to maintain code quality without
+spending time thinking through all test cases manually.
+CLAUDE CODE FOR INFERENCE
+
+Claude Code for data science
+and visualization
+Data Science and ML
+Engineering teams need
+sophisticated visualization
+tools to understand model
+performance, but building these
+tools often requires expertise
+in unfamiliar languages and
+frameworks. Claude Code
+enables these teams to build
+production-quality analytics
+dashboards without becoming
+full-stack developers.
+Main Claude Code use cases
+Building JavaScript/TypeScript dashboard apps
+Despite knowing “very little JavaScript and TypeScript,” the team uses
+Claude Code to build entire React applications for visualizing RL model
+performance and training data. They give Claude control to write full
+applications from scratch, like a 5,000-line TypeScript app, without
+needing to understand the code themselves. This is critical because
+visualization apps are relatively low context and don’t require
+understanding the entire monorepo, allowing rapid prototyping of tools
+to understand model performance during training and evaluations.
+Handling repetitive refactoring tasks
+When faced with merge conflicts or semi-complicated file refactoring
+that’s too complex for editor macros but not large enough for major
+development effort, they use Claude Code like a “slot machine” - commit
+their state, let Claude work autonomously for 30 minutes, and either
+accept the solution or restart fresh if it doesn’t work.
+Creating persistent analytics tools instead of throwaway notebooks
+Instead of building one-off Jupyter notebooks that get discarded, the
+team now has Claude build permanent React dashboards that can be
+reused across future model evaluations. This is important because
+understanding Claude’s performance is “one of the most important things
+for the team” - they need to understand how models perform during
+training and evaluations, which “is actually non-trivial and simple tools
+can’t get too much signal from looking at a single number go up.”
+Zero-dependency task delegation
+For tasks in completely unfamiliar codebases or languages, they delegate
+entire implementation to Claude Code, leveraging its ability to gather
+context from the monorepo and execute tasks without their involvement
+in the actual coding process. This allows productivity in areas outside
+their expertise instead of spending time learning new technologies.
+11
+Claude Code for data science and visualization
+Claude Code for data science
+and visualization
+11
+Data Science and ML
+Engineering teams need
+sophisticated visualization
+tools to understand model
+performance, but building these
+tools often requires expertise
+in unfamiliar languages and
+frameworks. Claude Code
+enables these teams to build
+production-quality
+analytics
+dashboards without becoming
+full-stack developers.
+Main Claude Code use cases
+Building JavaScript/Typescript dashboard apps
+Despite knowing "very little JavaScript and Typescript," the team uses
+Claude Code to build entire React applications for visualizing RL model
+performance and training data. They give Claude control to write full
+applications from scratch, like a 5,000-line Typescript app, without
+needing to understand the code themselves. This is critical because
+visualization apps are relatively low context and don't require
+understanding the entire monorepo, allowing rapid prototyping of tools
+to understand model performance during training and evaluations.
+Handling repetitive refactoring tasks
+When faced with merge conflicts or semi-complicated file refactoring
+that's too complex for editor macros but not large enough for major
+development effort, they use Claude Code like a "slot machine" - commit
+their state, let Claude work autonomously for 30 minutes, and either
+accept the solution or restart fresh if it doesn't work.
+Creating persistent analytics tools instead of throwaway notebooks
+Instead of building one-off Jupyter notebooks that get discarded, the
+team now has Claude build permanent React dashboards that can be
+reused across future model evaluations. This is important because
+understanding Claude's performance is "one of the most important things
+for the team" - they need to understand how models perform during
+training and evaluations, which "is actually non-trivial and simple tools
+can't get too much signal from looking at a single number go up."
+Zero-dependency task delegation
+For tasks in completely unfamiliar codebases or languages, they delegate
+entire implementation to Claude Code, leveraging its ability to gather
+context from the monorepo and execute tasks without their involvement
+in the actual coding process. This allows productivity in areas outside
+their expertise instead of spending time learning new technologies.
+CLAUDE CODE FOR DATA SCIENCE AND VISUALIZATION

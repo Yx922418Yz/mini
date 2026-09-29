@@ -1,0 +1,203 @@
+{
+  "pdf_engine": "pymupdf",
+  "pdfs": [
+    {
+      "name": "ai-assisted-code-review-assessment.pdf",
+      "bytes": 986515,
+      "pages": 9,
+      "chars": 53119
+    },
+    {
+      "name": "how-anthropic-uses-claude-code.pdf",
+      "bytes": 6218838,
+      "pages": 23,
+      "chars": 74839
+    },
+    {
+      "name": "how-openai-uses-codex.pdf",
+      "bytes": 8040907,
+      "pages": 13,
+      "chars": 12790
+    }
+  ],
+  "pages": [
+    {
+      "name": "agentic-ai-threats.html",
+      "raw_bytes": 392315,
+      "text_chars": 52512
+    },
+    {
+      "name": "ai-code-review-best-practices.html",
+      "raw_bytes": 182519,
+      "text_chars": 14297
+    },
+    {
+      "name": "benefits-agentic-ai-oncall.html",
+      "raw_bytes": 142300,
+      "text_chars": 7202
+    },
+    {
+      "name": "claude-code-best-practices.html",
+      "raw_bytes": 832025,
+      "text_chars": 10102
+    },
+    {
+      "name": "code-review-essentials.html",
+      "raw_bytes": 14972,
+      "text_chars": 12064
+    },
+    {
+      "name": "code-reviews-just-do-it.html",
+      "raw_bytes": 48437,
+      "text_chars": 5702
+    },
+    {
+      "name": "context-rot.html",
+      "raw_bytes": 271776,
+      "text_chars": 50809
+    },
+    {
+      "name": "copilot-prompt-injection-rce.html",
+      "raw_bytes": 21637,
+      "text_chars": 7721
+    },
+    {
+      "name": "devin-coding-agents-101.html",
+      "raw_bytes": 42766,
+      "text_chars": 21825
+    },
+    {
+      "name": "finding-vulnerabilities-claude-codex.html",
+      "raw_bytes": 114856,
+      "text_chars": 25725
+    },
+    {
+      "name": "good-context-good-code.html",
+      "raw_bytes": 9278,
+      "text_chars": 183
+    },
+    {
+      "name": "how-long-contexts-fail.html",
+      "raw_bytes": 19141,
+      "text_chars": 10498
+    },
+    {
+      "name": "how-to-review-code-effectively.html",
+      "raw_bytes": 198143,
+      "text_chars": 23345
+    },
+    {
+      "name": "how-warp-uses-warp.html",
+      "raw_bytes": 15515,
+      "text_chars": 95
+    },
+    {
+      "name": "kubernetes-troubleshooting-ai.html",
+      "raw_bytes": 147708,
+      "text_chars": 9730
+    },
+    {
+      "name": "lessons-from-ai-code-reviews.html",
+      "raw_bytes": 0,
+      "text_chars": 0
+    },
+    {
+      "name": "mcp-food-for-thought.html",
+      "raw_bytes": 55505,
+      "text_chars": 5454
+    },
+    {
+      "name": "mcp-introduction.html",
+      "raw_bytes": 378139,
+      "text_chars": 31022
+    },
+    {
+      "name": "mcp-registry-preview.html",
+      "raw_bytes": 27301,
+      "text_chars": 5711
+    },
+    {
+      "name": "mcp-server-authentication.html",
+      "raw_bytes": 189963,
+      "text_chars": 13977
+    },
+    {
+      "name": "multi-agent-systems-ai-native.html",
+      "raw_bytes": 169917,
+      "text_chars": 14436
+    },
+    {
+      "name": "observability-basics.html",
+      "raw_bytes": 133614,
+      "text_chars": 12710
+    },
+    {
+      "name": "owasp-top-ten.html",
+      "raw_bytes": 71432,
+      "text_chars": 17036
+    },
+    {
+      "name": "peeking-under-the-hood-of-claude-code.html",
+      "raw_bytes": 550,
+      "text_chars": 340
+    },
+    {
+      "name": "prompt-engineering-guide.html",
+      "raw_bytes": 128476,
+      "text_chars": 2882
+    },
+    {
+      "name": "prompt-engineering-overview.html",
+      "raw_bytes": 2005200,
+      "text_chars": 56376
+    },
+    {
+      "name": "sast-vs-dast.html",
+      "raw_bytes": 50594,
+      "text_chars": 21307
+    },
+    {
+      "name": "specs-are-the-new-source-code.html",
+      "raw_bytes": 217592,
+      "text_chars": 13147
+    },
+    {
+      "name": "sre-introduction.html",
+      "raw_bytes": 44520,
+      "text_chars": 26880
+    },
+    {
+      "name": "warp-vs-claude-code.html",
+      "raw_bytes": 452468,
+      "text_chars": 5401
+    },
+    {
+      "name": "writing-effective-tools-for-agents.html",
+      "raw_bytes": 203466,
+      "text_chars": 22116
+    }
+  ],
+  "site_files": [
+    {
+      "name": "favicon-16x16.png",
+      "bytes": 479
+    },
+    {
+      "name": "favicon-32x32.png",
+      "bytes": 1045
+    },
+    {
+      "name": "index.html",
+      "bytes": 721
+    },
+    {
+      "name": "robots.txt",
+      "bytes": 721
+    }
+  ],
+  "summary": {
+    "pdf_total_chars": 140748,
+    "html_total_chars": 500605,
+    "combined": 641353
+  }
+}

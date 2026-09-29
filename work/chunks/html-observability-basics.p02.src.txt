@@ -1,0 +1,109 @@
+Real-World Tracing Patterns and Anti-Patterns
+Effective Tracing Patterns
+Meaningful span names: Use consistent naming conventions like service_name/operation
+Right granularity: Create spans for significant operations, not every function call
+Proper context propagation: Ensure trace context flows through all communication channels
+Useful attributes: Add attributes that help with troubleshooting, like user IDs or feature flags
+Performance awareness: Watch out for the overhead of excessive span creation
+Tracing Anti-Patterns to Avoid
+Over-instrumentation: Creating too many spans can cause performance issues
+Missing context: Failing to propagate context breaks traces across service boundaries
+Inconsistent naming: Using different naming standards makes traces harder to interpret
+Too much data: Putting large payloads in spans can overwhelm your tracing backend
+Ignoring third-party services: Missing spans for external calls creates blind spots
+💡
+Explore how observability plays a crucial role in the performance and reliability of LLMs: LLM Observability.
+
+Business Value of Traces and Spans: Beyond Technical Benefits
+Traces aren't just for troubleshooting—they can provide business insights too:
+Track critical user journeys from end-to-end
+Measure the performance of key business operations
+Set SLOs (Service Level Objectives) based on trace data
+Quantify the cost of performance issues in real user terms
+Create business context by adding relevant attributes to spans
+When you can show how technical improvements affect user experience and business metrics, you bridge the gap between DevOps and business stakeholders.
+
+Conclusion
+Traces and spans give you X-ray vision into your distributed systems.
+
+They reveal the hidden connections between services, pinpoint performance bottlenecks, and dramatically speed up debugging.
+
+As systems grow more complex, this kind of observability isn't a luxury—it's essential.
+
+💡
+If you'd like to continue the conversation about distributed tracing and observability, join our Discord Community where DevOps professionals share their experiences and best practices!
+
+FAQs
+What's the difference between tracing and logging?
+
+Logging captures discrete events, while tracing shows the relationships between operations across services.
+
+Logs tell you what happened; traces show you how it happened.
+
+Will adding tracing slow down my application?
+
+Modern tracing libraries add minimal overhead — typically less than 3% performance impact when properly configured.
+
+With sampling, you can further reduce this impact.
+
+Do I need to modify all my code to add tracing?
+
+Not necessarily.
+
+Many frameworks offer automatic instrumentation that adds tracing with minimal code changes.
+
+OpenTelemetry provides auto-instrumentation for popular frameworks in most languages.
+
+How much data does distributed tracing generate?
+
+It varies widely based on traffic, sampling rate, and span detail.
+
+Plan for anywhere from gigabytes to terabytes per day for busy systems.
+
+That's why choosing the right observability platform matters for cost control.
+
+Can traces help with security and compliance?
+
+Yes!
+
+Traces create an audit trail of request flow through your system.
+
+With the right attributes, you can track which users or services accessed what data and when.
+
+How do traces and spans fit with other observability signals?
+
+Traces complement metrics and logs.
+
+Metrics show system health at a high level, logs provide detailed events, and traces connect the dots to show request flows across services.
+
+Topics
+Observability Monitoring
+About the authors
+Anjali Udasi
+Helping to make the tech a little less intimidating.
+
+I
+Contents
+Start observing for free.
+
+No lock-in.
+
+Book demo
+OPENTELEMETRY • PROMETHEUS Just update your config.
+
+Start seeing data on Last9 in seconds.
+
+DATADOG • NEW RELIC • OTHERS We've got you covered.
+
+Bring over your dashboards & alerts in one click.
+
+BUILT ON OPEN STANDARDS 100+ integrations.
+
+OTel native, works with your existing stack.
+
+4.8/5
+G2 Reviews
+Gartner Cool Vendor 2025
+High Performer
+Best Usability
+Highest User Adoption

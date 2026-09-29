@@ -1,0 +1,151 @@
+If the model is indeed insensitive to the content of the haystack, then varying this content, for example the haystack’s topic or narrative flow, should have no influence on the results.
+
+However, this assumption remains largely untested.
+
+We design four controlled experiments to investigate the influence of these factors:
+Needle-Question Similarity#
+We compute the cosine similarity between needle-question pairs using embeddings.
+
+For robustness, we average across five embedding models: text-embedding-3-small, text-embedding-3-large, jina-embeddings-v3, voyage-3-large, and all-MiniLM-L6-v2.
+
+We measure how model performance is impacted by needle-question similarity as input length increases.
+
+Impact of Distractors#
+Taking a high-similarity needle-question pair, we write four distractors.
+
+We have the following setups:
+Baseline: needle only, no distractors
+Single distractor: needle + one randomly positioned distractor
+Multiple distractors: needle + all four distractors randomly positioned
+We test the impact of distractors on model performance as input length increases to measure non-uniformity amongst distractors and input lengths.
+
+Needle-Haystack Similarity#
+We use two thematically distinct haystacks, Paul Graham essays and arXiv papers [12], and write corresponding needles for each.
+
+To measure needle-haystack similarity, we embed the haystack and retrieve the top-5 chunks for each needle, then average their cosine similarity scores.
+
+This process is repeated across five different embedding models for robustness.
+
+Haystack Structure#
+In typical NIAH setups, haystacks are concatenations of coherent texts, each with their own logical flow of ideas.
+
+For instance, the original NIAH benchmark uses a series of Paul Graham essays, where each essay follows a structured organization of ideas to form an argument.
+
+To evaluate whether this structure influences model performance, we compare two conditions:
+Original: preserves the natural flow of ideas within each excerpt
+Shuffled: sentences are randomly reordered throughout the haystack to maintain the same overall topic without logical continuity
+We demonstrate the following:
+Across all experiments, model performance consistently degrades with increasing input length.
+
+Lower similarity needle-question pairs increases the rate of performance degradation.
+
+Distractors have non-uniform impact on model performance with regards to how distracting they are relative to each other.
+
+We see this impact more prominently as input length increases, and observe distinctions in how various models respond to them.
+
+Needle-haystack similarity does not have a uniform effect on model performance, suggesting the need for further investigation.
+
+The structural pattern of the haystack consistently shows an impact on how models process long inputs.
+
+Details#
+For every unique combination of needle type, haystack topic, and haystack structure, we test each model across:
+8 input lengths
+11 needle positions
+We evaluate each model across its maximum context window with temperature=0 unless that setting is incompatible (i.e.
+
+o3) or explicitly discouraged (i.e.
+
+Qwen’s “thinking mode”).
+
+For Qwen models, we apply the YaRN method [13] to extend from 32,768 to 131,072 tokens.
+
+We include models in both standard and “thinking mode” where applicable.
+
+We evaluate model outputs using an aligned GPT-4.1 judge, using our method outlined in the appendix.
+
+We note some rare instances of a model refusing to attempt the task (69 out of 194,480 total LLM calls—0.035%).
+
+For example, Claude Opus 4 may sometimes have an empty output with stop_reason=”refusal”.
+
+Needle-Question Similarity#
+In real-world applications, models are often expected to handle ambiguous tasks and identify relevant information without relying on exact lexical matches.
+
+For example, when an agent is given a task involving a large corpus to search through, users rarely specify precise keywords for relevant parts.
+
+Instead, the model must infer relevance.
+
+We vary the similarity of our needle-question pairs, quantified by the cosine similarity of their embeddings.
+
+We find that as needle-question similarity decreases, model performance degrades more significantly with increasing input length.
+
+This reflects more realistic scenarios where exact question-answer matches are rare, and semantic ambiguity compounds the challenge of long input processing.
+
+Experiment#
+We source our haystack content from two domains: Paul Graham essays (as in the original NIAH experiment), and arXiv papers.
+
+For each haystack topic (PG essays, arXiv), we first determine common themes to guide our question and needle writing.
+
+We use clustering to identify the most common topics that appear for a given corpus:
+Chunk documents into 1-3 sentence chunks
+Embed each chunk using text-embedding-3-large
+Use UMAP [14] for dimensionality reduction with the following parameters: n_neighbors=30, min_dist=0.05, n_components=50, random_state=42
+Use HDBSCAN [15] to create clusters with the following parameters: min_cluster_size=10, min_samples=15
+Get 20 representative chunks for the largest clusters using maximal marginal relevance (MMR)
+Manually examine the largest clusters to determine their themes and style
+Using this method, we identify writing advice as a common topic for PG essays, often in anecdotal form.
+
+For arXiv papers, we identify information retrieval as a common topic, specifically re-ranking.
+
+We write a corresponding question for each topic:
+PG essays: "What was the best writing advice I got from my college classmate?"
+arXiv papers: "Which low-latency reranker is preferred for scientific domains?"
+Questions for Paul Graham essays & arXiv papersBefore writing our needles, we verify that answers to these questions do not exist in the haystack content:
+We store our previously computed haystack chunk embeddings in a vector database.
+
+Query top-10 results from that vector database with our question embedding.
+
+Manually examine these results to verify that they do not answer the given question.
+
+This sets up a fair testing environment as it ensures that alternative answers do not exist, and any incorrect answers are due to model hallucinations.
+
+For each question, we write 8 needles that each belong to the large cluster which we verify using approximate predictions.
+
+Needles that belong to the writing/retrieval cluster with >0.9 probability are considered to topically blend into the haystack.
+
+We manually write these needles to avoid data contamination.
+
+For the 8 needles, we also vary the level of ambiguity, quantified through the following method:
+Using an embedding model, we compute embeddings for needle and question and their cosine similarity.
+
+Repeat across five embedding models (text-embedding-3-small, text-embedding-3-large, jina-embeddings-v3, voyage-3-large, and all-MiniLM-L6-v2).
+
+For the PG essays topic, our needles range from 0.445-0.775 needle-question similarity with <0.1 standard deviation across the five embedding models.
+
+For the arXiv topic, we have a needle-question similarity range of 0.521-0.829, also with <0.1 standard deviation.
+
+Results#
+We observe a clear pattern that performance degrades more quickly in input length with lower similarity needle-question pairs.
+
+NIAH: Needle-Question Similarity (thinking/non-thinking modes of the same model are treated separately) - arXiv haystack/arXiv needles
+High Performance: upper 33% performance
+Blue: high-similarity needles (upper 50% similarity)
+Red: low-similarity needles (lower 50% similarity)At short input lengths, the models perform well even on low-similarity pairs.
+
+We see this most clearly in the high/medium-performance models, demonstrating that these models are capable of succeeding at this task for all needle-question pairs.
+
+The observed performance degradation at longer input lengths is not due to the intrinsic difficulty of the needle-question pairing.
+
+By holding the needle-question pair fixed and varying only the amount of irrelevant content, we isolate input size as the primary factor in performance decline.
+
+We also examine whether needle position influences performance.
+
+Testing across 11 needle positions, we find no notable variation in performance for this specific NIAH task.
+
+Impact of Distractors#
+It has already been established with older models that distractors degrade model performance and have non-uniform impact.
+
+Newer models are claimed to reliably handle any distractor, but does this hold true as input length increases?
+
+Our experiments reveal that the impact of distractors and their non-uniformity amplifies as input length grows across models, including the latest state-of-the-art models.
+
+We also observe distinct behaviors across model families in how they deal with ambiguity.

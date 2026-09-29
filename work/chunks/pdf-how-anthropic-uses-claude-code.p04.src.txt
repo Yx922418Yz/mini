@@ -1,0 +1,149 @@
+Claude Code for security
+engineering
+Team impact
+Reduced incident resolution time
+Infrastructure debugging that normally takes 10-15 minutes of manual
+code scanning now takes about 5 minutes.
+Improved security review cycle
+Terraform code reviews for security approval happen much faster,
+eliminating developer blocks while waiting for security team approval.
+Enhanced cross-functional contribution
+Team members can meaningfully contribute to projects within days
+instead of weeks of context building.
+Better documentation workflow
+Synthesized troubleshooting guides and runbooks from multiple sources
+create more efficient debugging processes.
+Top tips from the
+Security Engineering
+team
+Use custom slash commands extensively
+Security engineering uses 50% of all custom slash command
+implementations in the entire monorepo. These custom commands
+streamline specific workflows and speed up repeated tasks.
+Let Claude talk first
+Instead of asking targeted questions for code snippets, they now
+tell Claude Code to “commit your work as you go” and let it work
+autonomously with periodic check-ins, resulting in more
+comprehensive solutions.
+Leverage it for documentation
+Beyond coding, Claude Code excels at synthesizing documentation and
+creating structured outputs. They provide writing samples and formatting
+preferences to get documents they can immediately use in Slack, Google
+Docs, and other tools to avoid interface switching fatigue.
+8
+Claude Code for security engineering
+Claude Code for security
+■
+■
+eng1neer1ng
+Team impact
+Top tips from the
+Security Engineering
+team
+8
+Reduced incident resolution time
+Infrastructure debugging that normally takes 10-15 minutes of manual
+code scanning now takes about 5 minutes.
+Improved security review cycle
+Terraform code reviews for security approval happen much faster,
+eliminating developer blocks while waiting for security team approval.
+Enhanced cross-functional contribution
+Team members can meaningfully contribute to projects within days
+instead of weeks of context building.
+Better documentation workflow
+Synthesized troubleshooting guides and runbooks from multiple sources
+create more efficient debugging processes.
+Use custom slash commands extensively
+Security engineering uses 50% of all custom slash command
+implementations in the entire monorepo. These custom commands
+streamline specific workflows and speed up repeated tasks.
+Let Claude talk first
+Instead of asking targeted questions for code snippets, they now
+tell Claude Code to "commit your work as you go" and let it work
+autonomously with periodic check-ins, resulting in more
+comprehensive solutions.
+Leverage it for documentation
+Beyond coding, Claude Code excels at synthesizing documentation and
+creating structured outputs. They provide writing samples and formatting
+preferences to get documents they can immediately use in Slack, Google
+Docs, and other tools to avoid interface switching fatigue.
+CLAUDE CODE FOR SECURITY ENGINEERING
+
+Claude Code for inference
+The Inference team manages
+the memory system that stores
+information while Claude reads
+your prompt and generates its
+response. Team members,
+especially those who are new to
+machine learning, can use Claude
+Code extensively to bridge that
+knowledge gap and accelerate
+their work.
+Main Claude Code use cases
+Codebase comprehension and onboarding
+The team relies heavily on Claude Code to quickly understand the
+architecture when joining a complex codebase. Instead of manually
+searching GitHub repos, they ask Claude to find which files call specific
+functionalities, getting results in seconds rather than asking colleagues or
+searching manually.
+Unit test generation with edge case coverage
+After writing core functionality, they ask Claude to write comprehensive
+unit tests. Claude automatically includes missed edge cases, completing
+what would normally take significant mental energy in minutes, acting
+like a coding assistant they can review.
+Machine learning concept explanation
+Without a machine learning background, team members depend on
+Claude to explain model-specific functions and settings. What would
+require an hour of Google searching and reading documentation now
+takes 10-20 minutes, reducing research time by 80%.
+Cross-language code translation
+When testing functionality in different programming languages, they
+explain what they want to test and Claude writes the logic in the required
+language (like Rust), eliminating the need to learn new languages just for
+testing purposes.
+Command recall and Kubernetes management
+Instead of remembering complex Kubernetes commands, they ask Claude
+for the correct syntax, like “how to get all pods or deployment status,” and
+receive the exact commands needed for their infrastructure work.
+9
+Claude Code for inference
+Claude Code for inference
+9
+The Inference team manages
+the memory system that stores
+information while Claude reads
+your prompt and generates its
+response. Team members,
+especially those who are new to
+machine learning, can use Claude
+Code extensively to bridge that
+knowledge gap and accelerate
+their work.
+Main Claude Code use cases
+Codebase comprehension and onboarding
+The team relies heavily on Claude Code to quickly understand the
+architecture when joining a complex codebase. Instead of manually
+searching GitHub repos, they ask Claude to find which files call specific
+functionalities, getting results in seconds rather than asking colleagues or
+searching manually.
+Unit test generation with edge case coverage
+After writing core functionality, they ask Claude to write comprehensive
+unit tests. Claude automatically includes missed edge cases, completing
+what would normally take significant mental energy in minutes, acting
+like a coding assistant they can review.
+Machine learning concept explanation
+Without a machine learning background, team members depend on
+Claude to explain model-specific functions and settings. What would
+require an hour of Google searching and reading documentation now
+takes 10-20 minutes, reducing research time by 80%.
+Cross-language code translation
+When testing functionality in different programming languages, they
+explain what they want to test and Claude writes the logic in the required
+language (like Rust), eliminating the need to learn new languages just for
+testing purposes.
+Command recall and Kubemetes management
+Instead of remembering complex Kubernetes commands, they ask Claude
+for the correct syntax, like "how to get all pods or deployment status," and
+receive the exact commands needed for their infrastructure work.
+CLAUDE CODE FOR INFERENCE

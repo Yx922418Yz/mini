@@ -1,0 +1,285 @@
+你是资深技术译者，正在翻译斯坦福 CS146S《The Modern Software Developer》课程材料。
+把下面的英文原文翻译成简体中文。要求：
+1. 忠实、通顺，术语前后一致；保留原文的 Markdown 结构（标题/列表/表格/代码块）。
+2. 代码、命令行、文件名、API/产品名、URL 一律保持原文，不要翻译。
+3. 严格使用下方术语表给出的译法；术语表未覆盖的专业词，首次出现时写成「中文（English）」。
+4. 只输出译文本身，不要输出任何说明、致谢或前后缀。
+
+术语表（英文 = 中文）：
+- Vibe Coding = 氛围编程
+- Scaffolding = 脚手架
+- Context Engineering = 上下文工程
+- Context Rot = 上下文腐化
+- Agent = 智能体
+- Agentic AI = 智能体式 AI
+- Coding Agent = 编码智能体
+- LLM = 大语言模型
+- Prompt = 提示词
+- Prompt Engineering = 提示工程
+- System Prompt = 系统提示词
+- Token = 词元
+- Context Window = 上下文窗口
+- Long-context = 长上下文
+- Hallucination = 幻觉
+- Code Review = 代码评审
+- Pull Request = 拉取请求
+- Commit = 提交
+- Repository = 仓库
+- Monorepo = 单体仓库
+- Refactor = 重构
+- Linter = 静态检查器
+- Static Analysis = 静态分析
+- SAST = 静态应用安全测试（SAST）
+- DAST = 动态应用安全测试（DAST）
+- Vulnerability = 漏洞
+- Injection = 注入
+- Prompt Injection = 提示注入
+- Remote Code Execution = 远程代码执行
+- Supply Chain Attack = 供应链攻击
+- OWASP Top Ten = OWASP 十大安全风险
+- Model Context Protocol = 模型上下文协议
+- MCP Server = MCP 服务器
+- Tool Use = 工具调用
+- Tool Definition = 工具定义
+- Observability = 可观测性
+- Telemetry = 遥测
+- Distributed Tracing = 分布式链路追踪
+- On-call = 值班
+- Incident = 事故
+- Site Reliability Engineering = 站点可靠性工程
+- Service Level Agreement = 服务等级协议
+- Multi-agent System = 多智能体系统
+- Orchestration = 编排
+- Sandbox = 沙箱
+- Permission = 权限
+- Approval Flow = 审批流
+- Spec = 规格说明
+- Spec-driven Development = 规格驱动开发
+- Unit Test = 单元测试
+- Continuous Integration = 持续集成
+- Troubleshooting = 排障
+- Retrieval-Augmented Generation = 检索增强生成
+- Embedding = 嵌入向量
+- Vector Database = 向量数据库
+- Benchmark = 基准测试
+- Evaluation = 评估
+- Guardrail = 护栏
+- Human-in-the-loop = 人在回路
+- Autonomy = 自主性
+- Latency = 延迟
+- Throughput = 吞吐量
+- Regression = 回归
+- Pair Programming = 结对编程
+- Technical Debt = 技术债
+- Deterministic = 确定性的
+- Rubber Duck Debugging = 小黄鸭调试法
+
+
+--- 待翻译原文 ---
+
+SAST vs.
+
+DAST vs.
+
+RASP: Comparing Application Security Testing Methods
+Learn December 18, 2024 Shanika Wickramasinghe
+Global spending on information security is set to reach $212 billion by 2025.
+
+This represents a growth of 15% from 2024.
+
+According to Gartner, the rise of generative AI and cloud adoption are key reasons for this rapid increase.
+
+The analyst firm further predicts that GenAI will play a part in 17% of all cyberattacks by 2027.
+
+Businesses need advanced security strategies that go beyond traditional methods to counter these growing threats.
+
+This is why business owners need to be aware of security solutions like SAST, DAST, and RASP, as they offer multi-layered protection for applications.
+
+(Related reading: application security explained & common software testing methods.)
+What is SAST?
+
+Static Application Security Testing (SAST) is a white-box security testing method.
+
+SAST uses an application’s static source code or binaries to identify vulnerabilities.
+
+This means SAST tools operate on the application's code when the application is not running.
+
+Developers use SAST to detect various security risks, such as: cross-site scripting (XSS), insecure deserialization, buffer overflows, and other OWASP vulnerabilities in the code.
+
+Since SAST alone cannot identify run-time-specific vulnerabilities, developers have to often combine SAST with other testing methods to achieve comprehensive security.
+
+SAST is a major component of the software development lifecycle because it detects vulnerabilities early.
+
+The earlier you catch them, the least costly they are to fix.
+
+As SAST tools can be executed during the development phase, developers are now able to write code and test it even a thousand times (!!) before releasing the product to the market.
+
+SAST can be integrated into the CI/CD pipeline, and when done so, it is referred to as “Secure DevOps” or “DevSecOps.” SAST is widely scalable through automation.
+
+The ability to Implement automated tests covering SAST techniques makes it an efficient solution for addressing code-level risks quickly.
+
+What is DAST?
+
+Dynamic Application Security Testing is a black-box testing method.
+
+The term "Dynamic" in DAST suggests that this method evaluates the security of an application while the application is running.
+
+Unlike SAST, DAST does not require access to the application’s source code.
+
+Instead, it :
+Simulates the actions of an external attacker.
+
+Tests the application from the outside to identify vulnerabilities that only emerge during runtime.
+
+DAST has the capability to identify various security flaws like denial-of-service (DoS) vulnerabilities and insecure server configurations.
+
+By mimicking real-world attack scenarios, DAST tools assess how the application responds to these simulated threats.
+
+With this approach, developers can identify weaknesses that static testing methods like SAST might miss.
+
+Typically, developers perform DAST during the later stages of the software development lifecycle, often just before deployment.
+
+By testing applications in their live environments, DAST provides a clear overview of runtime security and supports better-performing applications that can withstand potential attacks.
+
+How does SAST work?
+
+Developers use SAST tools to apply predefined rules and other detection methods — such as pattern matching and data flow analysis — to identify coding errors and other vulnerabilities.
+
+They integrate these tools into their IDEs or CI/CD pipelines to automate scans during the coding and testing phases.
+
+Common SAST methods
+Here are some methods used in SAST.
+
+Pattern matching scans the codebase for known patterns of insecure coding practices.
+
+For example, the use of weak cryptographic algorithms or insecure API calls.
+
+Data flow C tracks how data flows through the application.
+
+This can identify vulnerabilities like SQL injection or buffer overflows by tracing untrusted input paths to sensitive operations.
+
+Control flow analysis can analyze the application's control structures.
+
+For example, loops and conditionals to uncover logical flaws or potential vulnerabilities like race conditions.
+
+Custom rule creation.
+
+Many tools allow developers to create custom rules to have coding best practices.
+
+Here are some examples of these custom rules:
+Flag any use of unsanitized input in SQL queries.
+
+Identify code that outputs user-provided data to the browser without proper escaping.
+
+Highlight the use of vulnerable or deprecated functions, such as eval() in JavaScript or strcpy() in C.
+
+Detect occurrences of hardcoded API keys and passwords in the source code and mark any instance where input validation is missing for user-provided data.
+
+Dependency scanning.
+
+Some SAST tools analyze third-party libraries and frameworks used in the application to identify vulnerabilities in dependencies.
+
+Semantic analysis.
+
+By interpreting the meaning of the code rather than just its structure, SAST tools can detect insecure configurations or misuse of APIs.
+
+Machine learning models: Advanced SAST tools incorporate machine learning algorithms to recognize previously unknown vulnerabilities by analyzing patterns across large datasets.
+
+Performance considerations when using SAST tools
+SAST tools often require significant CPU and memory resources.
+
+This can be a major issue when analyzing large codebases.
+
+A full scan of a million lines of code might consume several gigabytes of RAM.
+
+The time required for SAST scans can vary dramatically based on the size of the codebase, ranging from a few minutes for small projects to several hours for enterprise applications.
+
+This can impact:
+Build pipeline timelines
+Developer productivity
+Consider using modern SAST tools that support incremental scanning, allowing you to analyze only the changed code instead of the entire codebase.
+
+Additionally, performance tuning through rule selection and scope definition is crucial.
+
+Poorly configured SAST tools can unnecessarily analyze non-critical code paths, wasting time and resources without providing security benefits.
+
+How does DAST work?
+
+DAST tools simulate real-world attacks — for example, sending various forms of malicious data into input fields to see how the application processes it — to identify vulnerabilities and weaknesses in the application’s behavior and responses.
+
+Steps in DAST
+The process typically involves the following steps.
+
+Step 1: Scanning.
+
+Scan the web application to discover entry points (such as URLs, forms, and APIs).
+
+This step maps out the application’s structure and identifies potential attack surfaces.
+
+Step 2: Attack simulation.
+
+Simulate malicious activities by sending crafted requests to the application.
+
+These requests test for vulnerabilities like cross-site scripting and cross-site request forgery by attempting to exploit the entry points.
+
+Step 3: Vulnerability detection.
+
+Analyze the application’s responses to identify security weaknesses.
+
+It evaluates whether the application behaves as expected under attack.
+
+For example, malicious data can be injected to detect an SQL injection flaw.
+
+Step 4: Reporting.
+
+Generate reports with detected vulnerabilities and recommendations for remediation.
+
+Developers can use the results in the reports to fix the identified issues.
+
+Modern DAST solutions can incorporate advanced features such as AI-driven analysis and real-time data integration.
+
+They automatically create test sets.
+
+Dynamically adapt to the application’s structure and minimize false positives using machine learning algorithms.
+
+Performance considerations when using DAST tools
+Here are certain performance bottlenecks when using DAST tools that you need to keep in mind.
+
+DAST tools actively interact with the running application, temporarily increasing CPU and memory usage on both the application and web servers.
+
+The high volume of concurrent requests generated during DAST scanning can consume significant network bandwidth.
+
+DAST scanners often bypass or invalidate application caches by generating unique requests, reducing the effectiveness of caching mechanisms.
+
+The creation and management of multiple test sessions by DAST tools can increase memory usage on application servers.
+
+To avoid such issues or reduce their impact as much as possible, follow the practices below.
+
+Schedule DAST scans during off-peak hours when application usage is minimal.
+
+Conduct scans in a staging or pre-production environment that mirrors the production setup.
+
+Use throttling features in DAST tools to control the number of simultaneous requests.
+
+Increase application server thread pools during scanning periods.
+
+Configure separate caching policies for DAST scanner IPs.
+
+Implement automatic scan suspension if performance thresholds are exceeded.
+
+SAST vs.
+
+DAST: key differences
+This table summarizes the difference between SAST and DAST.
+
+Criteria
+SAST
+DAST
+Type of testing
+White-box testing.
+
+Tests the application from the inside out with access to the source code.
+
+Black-box testing.
+
+Tests the application from the outside without access to the source code.

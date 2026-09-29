@@ -1,0 +1,100 @@
+AI architecture without domain knowledge produces output that investigates the wrong things.
+
+The breakthrough happens when you combine both: knowing what database connection pools do under load (domain) with building agents that can coordinate pool health checks with deployment timeline analysis and upstream service validation: all running in parallel without stepping on each other (AI systems).
+
+At Resolve AI, our team includes engineers with over two decades of experience in production systems, founders who co-created OpenTelemetry (one of the most impactful open-source observability projects in the ecosystem) and researchers with deep artificial intelligence expertise who are the minds behind Google DeepResearch and Gemini Agents.
+
+This combination lets us build systems that don't just understand that "payment failures are bad" but know to check connection pool metrics and correlate with upstream service degradation.
+
+All the while managing complex agent orchestration that prevents circular investigations and maintains coherent narrative threads across parallel execution paths.
+
+About Resolve AI
+Resolve AI is your always-on AI SRE that helps you resolve incidents and run production.
+
+With Resolve AI customers like Salesforce, Zscaler, and Coinbase have increased engineering velocity and systems reliability by putting machines on-call for humans and letting engineers just code.
+
+Learn more about AI-native engineering workflows at resolve.ai.
+
+AI SRE Buyer's Guide
+Learn how to evaluate and adopt AI SRE in production.
+
+Download
+Spiros Xanthos
+Founder and CEO
+Spiros is the Founder and CEO of Resolve AI.
+
+He loves learning from customers and building.
+
+He helped create OpenTelemetry and started Log Insight (acquired by VMware) and Omnition (acquired by Splunk), most recently he was an SVP and the GM of the Observability business at Splunk.
+
+Gabor Angeli
+Research Engineer
+Gabor Angeli brings extensive AI expertise, most recently at Google DeepMind and Square.
+
+His work on products like Gemini and Square Assistant touches millions of users daily.
+
+He joined Resolve AI to build Agentic AI systems that help engineers understand and navigate production systems.
+
+Bharat Khandelwal
+Research Engineer
+@ Resolve AI
+Bharat is a Research Engineer at Resolve AI, where he builds agentic systems that enable large language models to debug and operate production software infrastructure.
+
+Prior to Resolve, he led machine learning initiatives at WorldQuant, designing transformer-based architectures for macroeconomic forecasting and incorporating LLM-driven sentiment signals from unstructured data.
+
+He has also worked at Moveworks on enterprise NLP systems and at Tower Research Capital, where he developed low-latency ML strategies for high-frequency trading.
+
+Bharat holds an M.S.
+
+in Computer Science from Stanford University, with a specialization in Artificial Intelligence, and a B.Tech.
+
+(Honors) in Computer Science from IIT Bombay.
+
+Content
+AI for prod ebook
+Learn how top engineering teams use AI to run production.
+
+Download
+Spiros Xanthos
+Founder and CEO
+Spiros is the Founder and CEO of Resolve AI.
+
+He loves learning from customers and building.
+
+He helped create OpenTelemetry and started Log Insight (acquired by VMware) and Omnition (acquired by Splunk), most recently he was an SVP and the GM of the Observability business at Splunk.
+
+Gabor Angeli
+Research Engineer
+Gabor Angeli brings extensive AI expertise, most recently at Google DeepMind and Square.
+
+His work on products like Gemini and Square Assistant touches millions of users daily.
+
+He joined Resolve AI to build Agentic AI systems that help engineers understand and navigate production systems.
+
+Bharat Khandelwal
+Research Engineer
+@ Resolve AI
+Bharat is a Research Engineer at Resolve AI, where he builds agentic systems that enable large language models to debug and operate production software infrastructure.
+
+Prior to Resolve, he led machine learning initiatives at WorldQuant, designing transformer-based architectures for macroeconomic forecasting and incorporating LLM-driven sentiment signals from unstructured data.
+
+He has also worked at Moveworks on enterprise NLP systems and at Tower Research Capital, where he developed low-latency ML strategies for high-frequency trading.
+
+Bharat holds an M.S.
+
+in Computer Science from Stanford University, with a specialization in Artificial Intelligence, and a B.Tech.
+
+(Honors) in Computer Science from IIT Bombay.
+
+Related Post
+Fireside Chat: How FinServ Companies Optimize Cost with AI for Prod
+Hear AI strategies and approaches from engineering leaders at FinServ companies including Affirm, MSCI, and SoFi.
+
+Technology
+How to Evaluate a Production Ready AI SRE
+Learn how to evaluate an AI SRE to ensure they run in your unique production environments.
+
+This guide explains the five agentic pillars, six key evaluation dimensions, and enterprise readiness criteria that separate production-ready AI SRE from experiments.
+
+Beyond the Build: Accelerating Engineering Velocity with Agentic AI
+100 Engineering software engineering executives joined Resolve AI and other luminary leaders to discuss the accelerated evolution of agentic AI in software engineering from coding to managing production systems.

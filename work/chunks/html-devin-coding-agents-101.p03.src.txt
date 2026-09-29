@@ -1,0 +1,67 @@
+Otherwise, most agents will assume the old patterns from these libraries due to knowledge cutoffs in the pretrained base models.
+
+A good agent can overcome this if you point it to docs, but you must be mindful of this (remember, the agent doesn't even know that there are new versions of these libraries).
+
+Practical Considerations
+Managing Time and Minimizing Losses
+Not all times you use an agent will result in success.
+
+In 2025, there is some real variance in the outcomes of these agents.
+
+Part of the job involves learning how to use agents in such a way to maximize the chance of running into successful outcomes while minimizing wasted time and tokens.
+
+Be willing to cut your losses earlier
+A common mistake for people who are new to using agents is that they commit to making an interaction successful, even when an agent's work is veering off track.
+
+If you ever find yourself thinking "it's ignoring my instructions" or "this thing is going in circles", you should be ok discontinuing that conversation or manually taking over.
+
+Sending more messages is more likely a sign of the inherent complexity of your task being higher than the agent's capabilities rather than some simple mistake that can be corrected.
+
+Diversifying your experiments
+If you're new to working with agents, we recommend diversifying your bets at the start.
+
+Try a range of different prompts and ideas.
+
+Double down on the types of tasks you see the agents naturally performing well on - and cut your losses on the ones they don't.
+
+Don't feel a need to force your agents to find success every time.
+
+Start fresh when you aren't making progress
+Starting over is the right answer a lot more often with agents than with humans.
+
+If you've given an agent a task and it is struggling to address feedback or correct course, starting fresh with a new agent and all of the instructions up front can often get to success much faster.
+
+The ability of an agent to correct a messed-up environment is much worse than its ability to spit out fresh code from scratch.
+
+Practical Considerations
+Security and Permissioning
+Create accounts for your agent
+A throwaway email is helpful for safe testing of sites.
+
+Create custom IAM roles for your agent if it needs to access cloud resources.
+
+Give it a development / staging environment
+Ideally the agent uses the same testing setup as the engineers on your team.
+
+We suggest avoiding giving access to production services entirely.
+
+When using remote agents, you can run fully isolated test environments on the agent's remote machine.
+
+Readonly API keys
+Where possible, give it readonly access.
+
+We find it is still helpful for humans to manually run any script that interacts with outside services.
+
+Practical Considerations
+Big Changes Ahead
+We firmly believe that software engineers aren't going anywhere.
+
+Even as coding agents become smarter and more capable, deep technical expertise and intimate knowledge of your codebase remain invaluable.
+
+True ownership of your projects, your systems, and your code is more critical now than ever.
+
+On our team today, engineers are expected to oversee multiple systems while still maintaining deep understanding and thoughtful judgment.
+
+As automation amplifies your impact, the ability to juggle parallel tasks won't just become possible; It'll become essential.
+
+We're excited to share the insights we've gathered while preparing our own organization for this shift, so you and your team can also thrive in the evolving world of software development.

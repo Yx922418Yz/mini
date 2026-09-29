@@ -1,0 +1,227 @@
+你是资深技术译者，正在翻译斯坦福 CS146S《The Modern Software Developer》课程材料。
+把下面的英文原文翻译成简体中文。要求：
+1. 忠实、通顺，术语前后一致；保留原文的 Markdown 结构（标题/列表/表格/代码块）。
+2. 代码、命令行、文件名、API/产品名、URL 一律保持原文，不要翻译。
+3. 严格使用下方术语表给出的译法；术语表未覆盖的专业词，首次出现时写成「中文（English）」。
+4. 只输出译文本身，不要输出任何说明、致谢或前后缀。
+
+术语表（英文 = 中文）：
+- Vibe Coding = 氛围编程
+- Scaffolding = 脚手架
+- Context Engineering = 上下文工程
+- Context Rot = 上下文腐化
+- Agent = 智能体
+- Agentic AI = 智能体式 AI
+- Coding Agent = 编码智能体
+- LLM = 大语言模型
+- Prompt = 提示词
+- Prompt Engineering = 提示工程
+- System Prompt = 系统提示词
+- Token = 词元
+- Context Window = 上下文窗口
+- Long-context = 长上下文
+- Hallucination = 幻觉
+- Code Review = 代码评审
+- Pull Request = 拉取请求
+- Commit = 提交
+- Repository = 仓库
+- Monorepo = 单体仓库
+- Refactor = 重构
+- Linter = 静态检查器
+- Static Analysis = 静态分析
+- SAST = 静态应用安全测试（SAST）
+- DAST = 动态应用安全测试（DAST）
+- Vulnerability = 漏洞
+- Injection = 注入
+- Prompt Injection = 提示注入
+- Remote Code Execution = 远程代码执行
+- Supply Chain Attack = 供应链攻击
+- OWASP Top Ten = OWASP 十大安全风险
+- Model Context Protocol = 模型上下文协议
+- MCP Server = MCP 服务器
+- Tool Use = 工具调用
+- Tool Definition = 工具定义
+- Observability = 可观测性
+- Telemetry = 遥测
+- Distributed Tracing = 分布式链路追踪
+- On-call = 值班
+- Incident = 事故
+- Site Reliability Engineering = 站点可靠性工程
+- Service Level Agreement = 服务等级协议
+- Multi-agent System = 多智能体系统
+- Orchestration = 编排
+- Sandbox = 沙箱
+- Permission = 权限
+- Approval Flow = 审批流
+- Spec = 规格说明
+- Spec-driven Development = 规格驱动开发
+- Unit Test = 单元测试
+- Continuous Integration = 持续集成
+- Troubleshooting = 排障
+- Retrieval-Augmented Generation = 检索增强生成
+- Embedding = 嵌入向量
+- Vector Database = 向量数据库
+- Benchmark = 基准测试
+- Evaluation = 评估
+- Guardrail = 护栏
+- Human-in-the-loop = 人在回路
+- Autonomy = 自主性
+- Latency = 延迟
+- Throughput = 吞吐量
+- Regression = 回归
+- Pair Programming = 结对编程
+- Technical Debt = 技术债
+- Deterministic = 确定性的
+- Rubber Duck Debugging = 小黄鸭调试法
+
+
+--- 待翻译原文 ---
+
+For instance, Cloudflare provides a robust platform for building and deploying remote MCP servers, making it easier to manage and scale MCP deployments.
+
+This flexibility ensures that MCP servers can be tailored to meet the specific needs of different applications and environments, whether it’s a local setup for development or a cloud-based solution for production.
+
+By focusing on a well-designed architecture and leveraging the flexibility of MCP, developers can create powerful and scalable MCP servers that enhance the capabilities of AI models, enabling them to interact seamlessly with external data sources and tools.
+
+MCP clients and tools
+MCP clients and tools are essential components of the Model Context Protocol ecosystem.
+
+MCP clients are applications that connect to MCP servers to access external data sources or tools.
+
+These clients can be built using various programming languages and frameworks, such as Python, JavaScript, or Java, providing developers with the flexibility to choose the best tools for their specific needs.
+
+MCP tools, on the other hand, are software components that provide specific capabilities or functions to MCP clients.
+
+These tools can be integrated with MCP servers to enable features such as data processing, AI model management, or tool integration.
+
+Examples of MCP tools include Claude Desktop, which provides a chat interface for interacting with AI models, and Cursor, which offers a plugin system for extending AI capabilities.
+
+Developers can build custom MCP clients and tools to meet specific use cases or requirements.
+
+This flexibility allows for innovation and experimentation in the MCP ecosystem, enabling developers to create new and exciting applications.
+
+Whether it’s a specialized tool for data analysis or a client application that integrates with multiple MCP servers, the possibilities are vast.
+
+By leveraging MCP clients and tools, developers can create robust and versatile applications that harness the full potential of AI models, enabling them to interact with a wide range of external data sources and tools seamlessly.
+
+Comparing MCP to other approaches
+MCP
+Custom Integrations
+ChatGPT Plugins
+LangChain & Frameworks
+Integration Speed
+✅ Fast, plug-and-play
+❌ Slow, custom code
+⚠️ Medium, proprietary
+⚠️ Medium, custom code
+Authentication
+✅ OAuth standard
+❌ Manual API keys
+⚠️ Plugin-specific OAuth
+❌ Varies by implementation
+Interaction Type
+✅ Continuous & context-rich
+❌ Ad-hoc interactions
+❌ Single-shot interactions
+⚠️ Context limited
+Open Standard
+✅ Yes
+❌ No
+⚠️ Framework-dependent
+Let’s compare a few approaches that existed before or alongside MCP:
+Custom Integrations & API Key Management: The most common traditional approach was to write custom code for each service and supply the LLM with credentials (API keys or tokens) to use those integrations.
+
+For example, you might write a Python function to query an API, give the LLM the ability to call that function, and manually handle the API key in your backend.
+
+This approach is labor-intensive and doesn’t scale – each new data source requires new code, and each environment must securely manage API keys.
+
+It often led to brittle systems, since every integration was unique.
+
+By contrast, MCP centralizes and standardizes these interactions: the AI agent just needs to handle the MCP protocol, and any MCP server (for any service) will work in a plug-and-play way.
+
+New servers can be added without changing the client’s code at all.
+
+Moreover, MCP provides a formal structure for authentication (discussed later) so that handing API keys to the AI isn’t done ad-hoc but through a secure protocol.
+
+ChatGPT Plugins (OpenAI Plugins): In 2023, OpenAI introduced a plugins system for ChatGPT that allowed models to call external APIs defined by an OpenAPI spec.
+
+This was an early step toward standardized tool use, but it has limitations.
+
+Each plugin is essentially its own mini-integration (with its own API schema and authentication), and they need to be built/hosted individually.
+
+Only certain platforms (like ChatGPT or Bing Chat) can use those plugins, since it was a proprietary approach.
+
+Plugins also were mostly one-shot calls – the model would call an API and get info, without a persistent connection or ongoing exchange.
+
+MCP differs in that it’s open and universal (not tied to one provider or interface) and it supports rich two-way interactions and continuous context.
+
+Think of ChatGPT plugins as specialized tools in a closed toolbox, whereas MCP is an open-standard toolkit that any developer or AI platform can utilize.
+
+MCP’s standardized auth (especially OAuth) also means it can handle secure access to user data in a more uniform way than the plugin-by-plugin OAuth flows in ChatGPT’s system.
+
+In summary, ChatGPT plugins showed the value of standardizing API access for LLMs, but MCP takes it further by making it an open protocol and by enabling a persistent “conversation” between AI and services.
+
+LLM Tool Frameworks (LangChain, Agentic libraries): Before MCP, many developers used frameworks like LangChain to give models tools.
+
+In these setups, you define a set of tool functions (with descriptions) and the agent’s prompting logic so the LLM can decide to use them.
+
+This works, but each tool still requires custom implementation behind the scenes – LangChain ended up with hundreds of tool integrations maintained in its library.
+
+Essentially, LangChain provided a developer-facing standard (a Python class interface) for integrating tools into an agent’s codebase, but nothing for the model to dynamically discover new tools at runtime.
+
+MCP is complementary to these frameworks, shifting the standardization to be model-facing.
+
+With MCP, an agent can discover and use any tool that an MCP server provides, even if the agent’s code didn’t explicitly include that tool ahead of time.
+
+In fact, LangChain has added support so it can treat MCP servers as just another tool source – meaning an agent built with LangChain can call MCP tools easily, leveraging the growing ecosystem of MCP servers.
+
+The difference is that MCP formalizes the interface over a protocol (JSON-RPC, with metadata, etc.), making it easier to plug into different environments, not just Python frameworks.
+
+Similarly, OpenAI’s native function calling feature can be seen as handling the formatting of a function call (the model outputs a JSON function call), whereas MCP handles the execution of that call in a standardized way .
+
+OpenAI’s function calling and MCP often work in tandem: the LLM produces a structured call, and the MCP client/server execute it and return the result, which together enables seamless tool use.
+
+In essence, MCP isn’t the first attempt to connect LLMs with external APIs – but it learns from those past approaches (plugins, tool libraries, etc.) and unifies the solution.
+
+It provides an open, model-agnostic protocol that simplifies integration and authentication.
+
+Particularly around security and auth, MCP’s design (with OAuth support) avoids the patchwork of per-plugin keys or giving raw API keys to the model.
+
+Instead, authentication can be handled in a consistent, standardized flow as part of the protocol – a major step up from the status quo.
+
+MCP in action: technical deep dive
+Let’s walk through a typical MCP interaction step-by-step to solidify how it works, and look at a bit of code.
+
+Imagine we have an AI assistant that wants to use an MCP server providing a set of tools (say, for a hypothetical “Neon” database service).
+
+The high-level flow is:
+1.
+
+Connect to the MCP Server – The host application (AI assistant) initializes an MCP client and establishes a connection to the server.
+
+Depending on the server location, this could be via a local process (stdio) or a remote HTTP stream (SSE).
+
+Under the hood, the client sends an initialize message to handshake protocol versions and capabilities.
+
+2.
+
+Discover Available Tools/Resources – The client then queries what the server offers.
+
+As shown earlier, it might send {"method": "tools/list"} and get back a list of tool definitions.
+
+The assistant can use this to inform the LLM (for example, by including the tool list in a system prompt or via the model’s function schema, depending on implementation).
+
+For instance, using an SDK, this could be one line of code like:
+const tools = await mcpClient.request({ method: 'tools/list' }, ListToolsResultSchema);which returns a structured list of tools.
+
+Each tool entry has a name, description, and JSON schema for inputs, so the AI knows what it can do.
+
+3.
+
+LLM Chooses a Tool – When a user asks the AI something that requires external action, the LLM determines (often via prompt engineering or function calling capabilities) that a certain tool should be used.
+
+For example, user asks: “What’s the latest price of AAPL stock?” The LLM sees it should call get_current_stock_price(company="AAPL", format="USD").
+
+The host application captures this intent (e.g., OpenAI’s function calling API would return a function name and arguments in JSON).
+
+4.

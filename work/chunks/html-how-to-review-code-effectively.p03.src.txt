@@ -1,0 +1,40 @@
+When you follow through on a promise to address feedback in a later branch, that helps build trust with your reviewer, which can help them feel comfortable approving your future pull requests because they know that you won’t leave something incomplete.
+
+Wrap-up
+Code review’s importance for product quality can’t be overstated, especially in the age of AI code generation.
+
+Many times in my career, a bug has been caught or an incident avoided simply by having that second set of eyes.
+
+Code review is well worth the time investment, whether spent in daily reviews, in ironing out processes, or in building automation to support it.
+
+It’s faster and less painful for developers to review pull requests thoroughly now than to deal with a problem later that’s already shipped to production.
+
+Thank you for caring enough about code quality to read my philosophy on code review.
+
+Have you checked your review queue lately?
+
+Maybe now is a good time to put these ideas into action.
+
+If you want to learn more about how to use pull request reviews on GitHub, check out the post on GitHub Community by Staff DevOps Architect Mickey Gousset and Staff DevOps Architect Joshua Johanning discussing 5 Tips for Reviewing a Pull Request.
+
+Tags:
+code review
+Written by
+Staff Software Engineer, GitHub
+Related posts
+Developer skills
+GitHub for Beginners: Getting started with GitHub security
+Learn how to secure your projects and keep them safe with GitHub Advanced Security.
+
+AI & ML
+Building AI-powered GitHub issue triage with the Copilot SDK
+Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.
+
+Developer skills
+GitHub for Beginners: Getting started with GitHub Actions
+Set up your first GitHub Actions workflow in this how-to guide.
+
+We do newsletters, too
+Discover tips, technical guides, and best practices in our biweekly newsletter just for devs.
+
+Your email address

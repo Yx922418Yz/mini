@@ -1,0 +1,4 @@
+This guide explains the five agentic pillars, six key evaluation dimensions, and enterprise readiness criteria that separate production-ready AI SRE from experiments.
+
+Beyond the Build: Accelerating Engineering Velocity with Agentic AI
+100 Engineering software engineering executives joined Resolve AI and other luminary leaders to discuss the accelerated evolution of agentic AI in software engineering from coding to managing production systems.
